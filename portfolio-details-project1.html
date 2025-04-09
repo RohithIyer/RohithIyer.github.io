@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
   <title>Financial Risk Prediction System | Project Details</title>
   <meta content="Large-scale financial risk prediction system using XGBoost, LSTMs, and cloud infrastructure." name="description">
   <meta content="Machine Learning / Finance / Cloud" name="keywords">
@@ -26,14 +26,14 @@
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
         <div class="row gy-4">
-          <div class="col-lg-8">
+          <div class="col-lg-8 col-md-12">
             <div class="portfolio-details-slider">
               <div class="align-items-center">
                 <img src="assets/img/financial-loan-status-distribution.jpg" alt="Financial Risk Prediction System" class="img-fluid">
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-12">
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
@@ -92,8 +92,8 @@
               </p>
               
               <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="card bg-dark">
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="card bg-dark h-100">
                     <div class="card-body">
                       <h4 class="card-title text-primary">Loan Status Distribution</h4>
                       <img src="assets/img/financial-loan-status-distribution.jpg" alt="Loan Status Distribution" class="img-fluid rounded mb-3">
@@ -104,8 +104,8 @@
                   </div>
                 </div>
                 
-                <div class="col-md-6 mb-4">
-                  <div class="card bg-dark">
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="card bg-dark h-100">
                     <div class="card-body">
                       <h4 class="card-title text-primary">Loan Purpose Analysis</h4>
                       <img src="assets/img/financial-loan-purpose-distribution.jpg" alt="Loan Purpose Distribution" class="img-fluid rounded mb-3">
@@ -117,9 +117,9 @@
                 </div>
               </div>
               
-              <div class="row mt-3">
-                <div class="col-md-6 mb-4">
-                  <div class="card bg-dark">
+              <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="card bg-dark h-100">
                     <div class="card-body">
                       <h4 class="card-title text-primary">Default Risk by Purpose</h4>
                       <img src="assets/img/financial-default-by-purpose.jpg" alt="Default Risk by Purpose" class="img-fluid rounded mb-3">
@@ -130,8 +130,8 @@
                   </div>
                 </div>
                 
-                <div class="col-md-6 mb-4">
-                  <div class="card bg-dark">
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="card bg-dark h-100">
                     <div class="card-body">
                       <h4 class="card-title text-primary">Interest Rate Distribution</h4>
                       <img src="assets/img/financial-interest-rate-distribution.jpg" alt="Interest Rate Distribution" class="img-fluid rounded mb-3">
@@ -143,9 +143,9 @@
                 </div>
               </div>
               
-              <div class="row mt-3">
-                <div class="col-md-6 mb-4">
-                  <div class="card bg-dark">
+              <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="card bg-dark h-100">
                     <div class="card-body">
                       <h4 class="card-title text-primary">Loan Amount Analysis</h4>
                       <img src="assets/img/financial-status-by-amount.jpg" alt="Loan Status by Amount" class="img-fluid rounded mb-3">
@@ -177,8 +177,8 @@
               </div>
               
               <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="card bg-dark">
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="card bg-dark h-100">
                     <div class="card-body">
                       <h4 class="card-title text-primary">Model Learning Curves</h4>
                       <img src="assets/img/financial-model-learning-curve1.jpg" alt="Model Learning Curve 1" class="img-fluid rounded mb-3">
@@ -189,8 +189,8 @@
                   </div>
                 </div>
                 
-                <div class="col-md-6 mb-4">
-                  <div class="card bg-dark">
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="card bg-dark h-100">
                     <div class="card-body">
                       <h4 class="card-title text-primary">Model Refinement</h4>
                       <img src="assets/img/financial-model-learning-curve2.jpg" alt="Model Learning Curve 2" class="img-fluid rounded mb-3">
@@ -259,7 +259,11 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 800,
+      once: true,
+      mirror: false
+    });
   </script>
 </body>
 </html>
