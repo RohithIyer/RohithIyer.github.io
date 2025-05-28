@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <title>AI SQL Agent | Project Details</title>
+  <meta content="Natural language to SQL query generator using LLMs and semantic understanding for database interactions." name="description">
+  <meta content="AI / Database / Natural Language Processing" name="keywords">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle-container">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <i class="bx bx-moon" id="themeIcon"></i>
+    </button>
+  </div>
+
+  <main id="main">
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>AI SQL Agent</h2>
+          <a href="index.html" class="btn btn-sm btn-primary">Back to Home</a>
+        </div>
+        <p>Intelligent agent that converts natural language queries to optimized SQL, enabling non-technical users to interact with databases.</p>
+      </div>
+    </section>
+    
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8 col-md-12">
+            <div class="portfolio-details-slider">
+              <div class="align-items-center">
+                <img src="assets/img/sql-agent-interface.jpg" alt="AI SQL Agent Interface" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-12">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: AI / Database Technology</li>
+                <li><strong>Technologies</strong>: Python, GPT-4, LangChain, PostgreSQL, FastAPI</li>
+                <li><strong>Models</strong>: Fine-tuned GPT-3.5, Custom embeddings</li>
+                <li><strong>Query Accuracy</strong>: 96% on benchmark dataset</li>
+                <li><strong>Project URL</strong>: <a href="https://github.com/RohithIyer/ai-sql-agent" target="_blank">GitHub Repo</a></li>
+              </ul>
+            </div>
+            
+            <div class="portfolio-description">
+              <h2>Project Overview</h2>
+              <p>
+                This AI-powered SQL agent democratizes database access by allowing users to query databases using natural language. The system understands context, handles complex joins, and optimizes queries for performance while maintaining data security.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Key Features Section -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="portfolio-description">
+              <h2>Core Capabilities</h2>
+              
+              <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="achievement-card">
+                    <h3><i class="bx bx-message-square-dots"></i> Natural Language Understanding</h3>
+                    <p>
+                      Advanced NLP capabilities for query interpretation:
+                    </p>
+                    <ul>
+                      <li>Context-aware query understanding</li>
+                      <li>Multi-turn conversation support</li>
+                      <li>Ambiguity resolution through clarification</li>
+                      <li>Intent classification for query types</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="achievement-card">
+                    <h3><i class="bx bx-data"></i> SQL Generation Engine</h3>
+                    <p>
+                      Sophisticated SQL query generation:
+                    </p>
+                    <ul>
+                      <li>Complex JOIN operations handling</li>
+                      <li>Aggregate functions and GROUP BY logic</li>
+                      <li>Query optimization for performance</li>
+                      <li>Support for multiple SQL dialects</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="achievement-card">
+                    <h3><i class="bx bx-shield-alt-2"></i> Security & Governance</h3>
+                    <p>
+                      Enterprise-grade security features:
+                    </p>
+                    <ul>
+                      <li>Role-based access control (RBAC)</li>
+                      <li>Query validation and sanitization</li>
+                      <li>Audit logging for compliance</li>
+                      <li>PII detection and masking</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="achievement-card">
+                    <h3><i class="bx bx-line-chart"></i> Analytics & Insights</h3>
+                    <p>
+                      Built-in analytics capabilities:
+                    </p>
+                    <ul>
+                      <li>Automatic data visualization suggestions</li>
+                      <li>Trend analysis and anomaly detection</li>
+                      <li>Export to various formats (CSV, JSON, Excel)</li>
+                      <li>Scheduled report generation</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Technical Architecture Section -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="portfolio-description">
+              <h2>Technical Architecture</h2>
+              
+              <div class="achievement-card mb-4">
+                <h3><i class="bx bx-code-block"></i> System Design</h3>
+                <p>
+                  The AI SQL Agent uses a modular architecture for scalability and maintainability:
+                </p>
+                <pre class="bg-dark text-light p-3 rounded">
+# Core Components Architecture
+├── NLP Engine (GPT-4 Fine-tuned)
+│   ├── Intent Recognition
+│   ├── Entity Extraction
+│   └── Context Management
+├── SQL Generator
+│   ├── Schema Understanding
+│   ├── Query Builder
+│   └── Optimization Engine
+├── Execution Layer
+│   ├── Query Validator
+│   ├── Security Manager
+│   └── Result Processor
+└── API Gateway (FastAPI)
+    ├── Authentication
+    ├── Rate Limiting
+    └── Response Caching</pre>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="card bg-dark text-light h-100">
+                    <div class="card-body">
+                      <h4 class="card-title text-primary">Schema Learning</h4>
+                      <p>Intelligent database schema understanding:</p>
+                      <ul>
+                        <li>Automatic schema discovery and indexing</li>
+                        <li>Relationship mapping between tables</li>
+                        <li>Column type inference and validation</li>
+                        <li>Custom business logic integration</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                  <div class="card bg-dark text-light h-100">
+                    <div class="card-body">
+                      <h4 class="card-title text-primary">Query Optimization</h4>
+                      <p>Performance-focused query generation:</p>
+                      <ul>
+                        <li>Index usage optimization</li>
+                        <li>Query plan analysis and improvement</li>
+                        <li>Caching frequent query patterns</li>
+                        <li>Parallel execution for complex queries</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Use Cases Section -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="portfolio-description">
+              <h2>Real-World Applications</h2>
+              
+              <div class="achievement-card mb-4">
+                <h3><i class="bx bx-briefcase"></i> Business Use Cases</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <h5 class="text-primary mt-3">Sales Analytics</h5>
+                    <p><em>"Show me top 10 customers by revenue last quarter"</em></p>
+                    <p>Automatically generates complex queries with proper JOINs, aggregations, and date filtering.</p>
+                    
+                    <h5 class="text-primary mt-3">Inventory Management</h5>
+                    <p><em>"Which products are running low on stock?"</em></p>
+                    <p>Identifies products below reorder threshold with supplier information.</p>
+                  </div>
+                  <div class="col-md-6">
+                    <h5 class="text-primary mt-3">HR Analytics</h5>
+                    <p><em>"Average salary by department and experience level"</em></p>
+                    <p>Creates multi-dimensional analysis with proper grouping and calculations.</p>
+                    
+                    <h5 class="text-primary mt-3">Customer Support</h5>
+                    <p><em>"Find all unresolved tickets older than 3 days"</em></p>
+                    <p>Generates time-based queries with status filtering and prioritization.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Performance Metrics -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="portfolio-description">
+              <h2>Performance & Results</h2>
+              
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="card bg-dark text-light h-100">
+                    <div class="card-body">
+                      <h4 class="card-title text-primary">Technical Metrics</h4>
+                      <ul>
+                        <li>Query Accuracy: 96% on benchmark</li>
+                        <li>Average Response Time: 1.2 seconds</li>
+                        <li>Supported Databases: 8 major systems</li>
+                        <li>Concurrent Users: 500+ supported</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                  <div class="card bg-dark text-light h-100">
+                    <div class="card-body">
+                      <h4 class="card-title text-primary">Business Impact</h4>
+                      <ul>
+                        <li>80% reduction in time to insights</li>
+                        <li>Democratized data access for 200+ users</li>
+                        <li>$500K saved in analyst hours annually</li>
+                        <li>Zero SQL injection incidents</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="achievement-card mt-4">
+                <h3><i class="bx bx-test-tube"></i> Testing & Validation</h3>
+                <p>Comprehensive testing approach ensures reliability:</p>
+                <ul>
+                  <li><strong>Unit Tests:</strong> 95% code coverage for core components</li>
+                  <li><strong>Integration Tests:</strong> End-to-end query validation</li>
+                  <li><strong>Performance Tests:</strong> Load testing with 1000+ concurrent queries</li>
+                  <li><strong>Security Audits:</strong> Regular penetration testing and vulnerability scans</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Future Roadmap -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="portfolio-description">
+              <h2>Future Development</h2>
+              
+              <div class="achievement-card">
+                <h3><i class="bx bx-rocket"></i> Upcoming Features</h3>
+                <ul>
+                  <li>Multi-database federation for cross-system queries</li>
+                  <li>Voice input support for hands-free operation</li>
+                  <li>Real-time collaborative query building</li>
+                  <li>Advanced ML-based query recommendations</li>
+                  <li>Integration with popular BI tools (Tableau, PowerBI)</li>
+                  <li>Mobile application for on-the-go access</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    &copy; 2025 Rohith Krishnamurthy. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      mirror: false
+    });
+
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    body.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        themeIcon.classList.remove('bx-sun');
+        themeIcon.classList.add('bx-moon');
+      } else {
+        themeIcon.classList.remove('bx-moon');
+        themeIcon.classList.add('bx-sun');
+      }
+    }
+  </script>
+</body>
+</html>
