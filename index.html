@@ -4,10 +4,221 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
   <title>Rohith Krishnamurthy | Data Analyst</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS with fallback -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Inline critical styles for file:// protocol -->
+  <style>
+    /* Basic styles that work without external CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #121212;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #00ffc8;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 25px;
+      margin: 5px;
+      background-color: #00ffc8;
+      color: #0a0a0a;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background-color: #00d4aa;
+      transform: translateY(-2px);
+    }
+    .btn-primary {
+      background-color: #00ffc8;
+      color: #0a0a0a;
+      border: none;
+    }
+    .btn-outline-primary {
+      background-color: transparent;
+      color: #00ffc8;
+      border: 2px solid #00ffc8;
+    }
+    .btn-outline-primary:hover {
+      background-color: #00ffc8;
+      color: #0a0a0a;
+    }
+    .card {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      height: 100%;
+      position: relative;
+    }
+    .project-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .card h5 {
+      color: #00ffc8;
+      margin-bottom: 15px;
+    }
+    .card p {
+      color: #b0b0b0;
+      margin-bottom: 15px;
+    }
+    .btn-container {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: auto;
+    }
+    .new-project-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ff6b6b;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      z-index: 1;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #00ffc8;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+      justify-content: center;
+    }
+    .col-lg-5 {
+      flex: 0 0 45%;
+      max-width: 45%;
+      padding: 15px;
+    }
+    @media (max-width: 768px) {
+      .col-lg-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    /* Theme toggle button */
+    .theme-toggle-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .theme-toggle {
+      background-color: #1a1a1a;
+      border: 2px solid #00ffc8;
+      color: #00ffc8;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Contact section */
+    .contact-item {
+      color: #00ffc8;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin: 0 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .contact-item:hover {
+      color: #7b68ee;
+      transform: translateY(-5px);
+    }
+    /* Timeline styles */
+    .timeline {
+      position: relative;
+      padding: 20px 0;
+    }
+    .timeline-container {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+      margin-bottom: 20px;
+    }
+    .timeline-content {
+      padding: 20px 30px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      left: 50%;
+    }
+    @media (max-width: 768px) {
+      .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .right {
+        left: 0;
+      }
+    }
+    footer {
+      background-color: #121212;
+      text-align: center;
+      padding: 30px 0;
+      border-top: 1px solid #333;
+    }
+  </style>
+  
+  <!-- External CSS with proper path -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -125,7 +336,7 @@
         <div class="col-lg-5 col-md-6 col-12 mb-4" data-aos="fade-up">
           <div class="card h-100">
             <div class="new-project-badge">New!</div>
-            <img src="assets/img/dashboard_header.jpg" class="project-img" alt="Taxi Service Optimization">
+            <img src="assets/img/demand_trend_chart.jpg" class="project-img" alt="Taxi Service Optimization">
             <div class="card-body d-flex flex-column">
               <h5>🚕 Taxi Service Optimization</h5>
               <p><strong>Tools:</strong> Python, XGBoost, RandomForest, Streamlit, Pandas</p>
@@ -170,7 +381,54 @@
           </div>
         </div>
 
+        <!-- Privacy Policy Analyzer -->
+        <div class="col-lg-5 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100">
+            <div class="new-project-badge">New!</div>
+            <img src="assets/img/financial-model-learning-curve1.jpg" class="project-img" alt="Privacy Policy Analyzer">
+            <div class="card-body d-flex flex-column">
+              <h5>🔒 Privacy Policy Analyzer</h5>
+              <p><strong>Tools:</strong> Python, BERT, spaCy, Flask, MongoDB</p>
+              <p>NLP-powered tool analyzing privacy policies with 94% accuracy. Extracts key information and identifies potential privacy concerns automatically.</p>
+              <div class="mt-auto btn-container">
+                <a href="https://github.com/RohithIyer/privacy-policy-analyzer" class="btn btn-primary" target="_blank">GitHub</a>
+                <a href="portfolio-details-privacy.html" class="btn btn-outline-primary">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- AI SQL Agent -->
+        <div class="col-lg-5 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100">
+            <img src="assets/img/efficiency_metrics.jpg" class="project-img" alt="AI SQL Agent">
+            <div class="card-body d-flex flex-column">
+              <h5>🤖 AI SQL Agent</h5>
+              <p><strong>Tools:</strong> Python, GPT-4, LangChain, PostgreSQL, FastAPI</p>
+              <p>Natural language to SQL converter with 96% accuracy. Enables non-technical users to query databases using plain English.</p>
+              <div class="mt-auto btn-container">
+                <a href="https://github.com/RohithIyer/ai-sql-agent" class="btn btn-primary" target="_blank">GitHub</a>
+                <a href="portfolio-details-sql.html" class="btn btn-outline-primary">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stock Prediction System -->
+        <div class="col-lg-5 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="card h-100">
+            <img src="assets/img/revenue_trend_chart.jpg" class="project-img" alt="Stock Prediction System">
+            <div class="card-body d-flex flex-column">
+              <h5>📈 Stock Market Predictor</h5>
+              <p><strong>Tools:</strong> Python, TensorFlow, yfinance, Dash, Redis</p>
+              <p>ML system combining technical analysis and sentiment for 87% directional accuracy in stock price predictions.</p>
+              <div class="mt-auto btn-container">
+                <a href="https://github.com/RohithIyer/stock-prediction" class="btn btn-primary" target="_blank">GitHub</a>
+                <a href="portfolio-details-stock.html" class="btn btn-outline-primary">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
