@@ -13,6 +13,13 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle-container">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <i class="bx bx-moon" id="themeIcon"></i>
+    </button>
+  </div>
+
   <main id="main">
     <section class="breadcrumbs">
       <div class="container">
@@ -29,7 +36,7 @@
           <div class="col-lg-8 col-md-12">
             <div class="portfolio-details-slider">
               <div class="align-items-center">
-                <img src="assets/img/airbnb-hotspot-map.jpg" alt="Airbnb Austin Map Visualization" class="img-fluid">
+                <img src="assets/img/airbnb-hotspot-map.JPG" alt="Airbnb Austin Map Visualization" class="img-fluid">
               </div>
             </div>
           </div>
@@ -100,7 +107,7 @@
                   The analysis began with extensive data cleaning and preparation. From the provided dataset, I selected and merged three key files (listings.csv, listings_summary.csv, and calendar.csv) using Tableau's union function. This integration created a comprehensive dataset capturing both property characteristics and temporal patterns.
                 </p>
                 <div class="text-center my-4">
-                  <img src="assets/img/airbnb-accommodations.jpg" alt="Data Processing Visualization" class="img-fluid rounded" style="max-height: 400px;">
+                  <img src="assets/img/airbnb-accommodations.JPG" alt="Data Processing Visualization" class="img-fluid rounded" style="max-height: 400px;">
                 </div>
               </div>
               
@@ -132,7 +139,7 @@
                   <div class="card bg-dark h-100">
                     <div class="card-body">
                       <h4 class="card-title text-primary">Host Distribution</h4>
-                      <img src="assets/img/airbnb-hosts-chart.jpg" alt="Austin Preferred Hosts Chart" class="img-fluid rounded mb-3">
+                      <img src="assets/img/airbnb-hosts-chart.JPG" alt="Austin Preferred Hosts Chart" class="img-fluid rounded mb-3">
                       <p>
                         One host ("Erica") dominated the Austin market with significantly more listings than any competitor. The next highest host had only about one-third as many properties, indicating potential market concentration issues.
                       </p>
@@ -144,7 +151,7 @@
                   <div class="card bg-dark h-100">
                     <div class="card-body">
                       <h4 class="card-title text-primary">Neighborhood Pricing</h4>
-                      <img src="assets/img/airbnb-pricing-boxplot.jpg" alt="Pricing Boxplot" class="img-fluid rounded mb-3">
+                      <img src="assets/img/airbnb-pricing-boxplot.JPG" alt="Pricing Boxplot" class="img-fluid rounded mb-3">
                       <p>
                         Pricing analysis revealed distinct patterns across neighborhoods:
                       </p>
@@ -163,7 +170,7 @@
                   <div class="card bg-dark h-100">
                     <div class="card-body">
                       <h4 class="card-title text-primary">Seasonal Availability</h4>
-                      <img src="assets/img/airbnb-seasonal-trends.jpg" alt="Seasonal Availability Chart" class="img-fluid rounded mb-3">
+                      <img src="assets/img/airbnb-seasonal-trends.JPG" alt="Seasonal Availability Chart" class="img-fluid rounded mb-3">
                       <p>
                         The analysis uncovered distinct seasonal patterns:
                       </p>
@@ -180,7 +187,7 @@
                   <div class="card bg-dark h-100">
                     <div class="card-body">
                       <h4 class="card-title text-primary">Geographic Hotspots</h4>
-                      <img src="assets/img/airbnb-hotspot-map.jpg" alt="Geographic Hotspots Map" class="img-fluid rounded mb-3">
+                      <img src="assets/img/airbnb-hotspot-map.JPG" alt="Geographic Hotspots Map" class="img-fluid rounded mb-3">
                       <p>
                         Geospatial analysis identified clear patterns:
                       </p>
@@ -260,6 +267,35 @@
       once: true,
       mirror: false
     });
+
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    body.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        themeIcon.classList.remove('bx-sun');
+        themeIcon.classList.add('bx-moon');
+      } else {
+        themeIcon.classList.remove('bx-moon');
+        themeIcon.classList.add('bx-sun');
+      }
+    }
   </script>
 </body>
 </html>
