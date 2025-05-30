@@ -13,6 +13,13 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle-container">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <i class="bx bx-moon" id="themeIcon"></i>
+    </button>
+  </div>
+
   <main id="main">
     <section class="breadcrumbs">
       <div class="container">
@@ -29,7 +36,7 @@
           <div class="col-lg-8 col-md-12">
             <div class="portfolio-details-slider">
               <div class="align-items-center">
-                <img src="https://rohithiyer.github.io/assets/img/dashboard_header.jpg" alt="Taxi Service Optimization Dashboard" class="img-fluid">
+                <img src="assets/img/dashboard_header.JPG" alt="Taxi Service Optimization Dashboard" class="img-fluid">
               </div>
             </div>
           </div>
@@ -59,19 +66,19 @@
               <h2>Dashboard Visualizations</h2>
               <div class="row">
                 <div class="col-md-6 mb-4">
-                  <img src="assets/img/demand_trend_chart.jpg" alt="Trip Demand Trend Analysis" class="img-fluid rounded">
+                  <img src="assets/img/demand_trend_chart.JPG" alt="Trip Demand Trend Analysis" class="img-fluid rounded">
                   <p class="text-center mt-2">Trip Demand Trend Analysis</p>
                 </div>
                 <div class="col-md-6 mb-4">
-                  <img src="assets/img/revenue_trend_chart.jpg" alt="Revenue Trend Analysis" class="img-fluid rounded">
+                  <img src="assets/img/revenue_trend_chart.JPG" alt="Revenue Trend Analysis" class="img-fluid rounded">
                   <p class="text-center mt-2">Revenue Trend Analysis</p>
                 </div>
                 <div class="col-md-6 mb-4">
-                  <img src="assets/img/efficiency_metrics.jpg" alt="Efficiency Metrics Dashboard" class="img-fluid rounded">
+                  <img src="assets/img/efficiency_metrics.JPG" alt="Efficiency Metrics Dashboard" class="img-fluid rounded">
                   <p class="text-center mt-2">Efficiency Metrics Dashboard</p>
                 </div>
                 <div class="col-md-6 mb-4">
-                  <img src="assets/img/forecast_insights.jpg" alt="Forecast Insights & Recommendations" class="img-fluid rounded">
+                  <img src="assets/img/forecast_insights.JPG" alt="Forecast Insights & Recommendations" class="img-fluid rounded">
                   <p class="text-center mt-2">Forecast Insights & Recommendations</p>
                 </div>
               </div>
@@ -86,11 +93,11 @@
               <h2>Model Performance</h2>
               <div class="row">
                 <div class="col-md-6 mb-4">
-                  <img src="assets/img/model_demand_accuracy.jpg" alt="Trip Demand Prediction Model (88.2% Accuracy)" class="img-fluid rounded">
+                  <img src="assets/img/model_demand_accuracy.JPG" alt="Trip Demand Prediction Model (88.2% Accuracy)" class="img-fluid rounded">
                   <p class="text-center mt-2">Trip Demand Prediction Model (88.2% Accuracy)</p>
                 </div>
                 <div class="col-md-6 mb-4">
-                  <img src="assets/img/model_revenue_accuracy.jpg" alt="Revenue Prediction Model (95.5% Accuracy)" class="img-fluid rounded">
+                  <img src="assets/img/model_revenue_accuracy.JPG" alt="Revenue Prediction Model (95.5% Accuracy)" class="img-fluid rounded">
                   <p class="text-center mt-2">Revenue Prediction Model (95.5% Accuracy)</p>
                 </div>
               </div>
@@ -136,11 +143,11 @@
               
               <div class="row">
                 <div class="col-md-6 mb-4">
-                  <img src="assets/img/demand_forecast.jpg" alt="Trip Demand Forecast" class="img-fluid rounded">
+                  <img src="assets/img/demand_forecast.JPG" alt="Trip Demand Forecast" class="img-fluid rounded">
                   <p class="text-center mt-2">Trip Demand Forecast</p>
                 </div>
                 <div class="col-md-6 mb-4">
-                  <img src="assets/img/revenue_forecast.jpg" alt="Revenue Forecast" class="img-fluid rounded">
+                  <img src="assets/img/revenue_forecast.JPG" alt="Revenue Forecast" class="img-fluid rounded">
                   <p class="text-center mt-2">Revenue Forecast</p>
                 </div>
               </div>
@@ -330,6 +337,35 @@ streamlit run dashboard/app.py</pre>
       once: true,
       mirror: false
     });
+
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    body.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        themeIcon.classList.remove('bx-sun');
+        themeIcon.classList.add('bx-moon');
+      } else {
+        themeIcon.classList.remove('bx-moon');
+        themeIcon.classList.add('bx-sun');
+      }
+    }
   </script>
 </body>
 </html>
