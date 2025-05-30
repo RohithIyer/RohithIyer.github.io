@@ -37,7 +37,7 @@
           <div class="col-lg-8 col-md-12">
             <div class="portfolio-details-slider">
               <div class="align-items-center">
-                <img src="assets/img/sql-agent-interface.jpg" alt="AI SQL Agent Interface" class="img-fluid">
+                <img src="assets/img/sql-agent-main.jpg" alt="AI SQL Agent Interface" class="img-fluid">
               </div>
             </div>
           </div>
@@ -143,28 +143,12 @@
               <h2>Technical Architecture</h2>
               
               <div class="achievement-card mb-4">
-                <h3><i class="bx bx-code-block"></i> System Design</h3>
+                <h3><i class="bx bx-code-block"></i> System Architecture</h3>
                 <p>
                   The AI SQL Agent uses a modular architecture for scalability and maintainability:
                 </p>
-                <pre class="bg-dark text-light p-3 rounded">
-# Core Components Architecture
-├── NLP Engine (GPT-4 Fine-tuned)
-│   ├── Intent Recognition
-│   ├── Entity Extraction
-│   └── Context Management
-├── SQL Generator
-│   ├── Schema Understanding
-│   ├── Query Builder
-│   └── Optimization Engine
-├── Execution Layer
-│   ├── Query Validator
-│   ├── Security Manager
-│   └── Result Processor
-└── API Gateway (FastAPI)
-    ├── Authentication
-    ├── Rate Limiting
-    └── Response Caching</pre>
+                <img src="assets/img/sql-agent-generated-query.jpg" alt="Generated SQL Query" class="img-fluid rounded mb-3">
+                <p>The system automatically generates optimized SQL queries from natural language input, handling complex joins and aggregations.</p>
               </div>
               
               <div class="row">
@@ -172,13 +156,8 @@
                   <div class="card bg-dark text-light h-100">
                     <div class="card-body">
                       <h4 class="card-title text-primary">Schema Learning</h4>
-                      <p>Intelligent database schema understanding:</p>
-                      <ul>
-                        <li>Automatic schema discovery and indexing</li>
-                        <li>Relationship mapping between tables</li>
-                        <li>Column type inference and validation</li>
-                        <li>Custom business logic integration</li>
-                      </ul>
+                      <img src="assets/img/sql-agent-schema.jpg" alt="Database Schema View" class="img-fluid rounded mb-3">
+                      <p>Intelligent database schema understanding with automatic discovery and relationship mapping.</p>
                     </div>
                   </div>
                 </div>
@@ -187,13 +166,8 @@
                   <div class="card bg-dark text-light h-100">
                     <div class="card-body">
                       <h4 class="card-title text-primary">Query Optimization</h4>
-                      <p>Performance-focused query generation:</p>
-                      <ul>
-                        <li>Index usage optimization</li>
-                        <li>Query plan analysis and improvement</li>
-                        <li>Caching frequent query patterns</li>
-                        <li>Parallel execution for complex queries</li>
-                      </ul>
+                      <img src="assets/img/sql-agent-optimization.jpg" alt="Query Optimization" class="img-fluid rounded mb-3">
+                      <p>AI-powered optimization suggestions for better query performance.</p>
                     </div>
                   </div>
                 </div>
@@ -210,10 +184,22 @@
               
               <div class="achievement-card mb-4">
                 <h3><i class="bx bx-briefcase"></i> Business Use Cases</h3>
+                
+                <div class="row mb-4">
+                  <div class="col-md-6">
+                    <img src="assets/img/sql-agent-results.jpg" alt="Query Results" class="img-fluid rounded mb-3">
+                    <p>The system provides clean, formatted results with export options.</p>
+                  </div>
+                  <div class="col-md-6">
+                    <img src="assets/img/sql-agent-explanation.jpg" alt="Query Explanation" class="img-fluid rounded mb-3">
+                    <p>Detailed explanations help users understand the generated queries.</p>
+                  </div>
+                </div>
+                
                 <div class="row">
                   <div class="col-md-6">
                     <h5 class="text-primary mt-3">Sales Analytics</h5>
-                    <p><em>"Show me top 10 customers by revenue last quarter"</em></p>
+                    <p><em>"Show me top 10 customers by total sales in the last quarter"</em></p>
                     <p>Automatically generates complex queries with proper JOINs, aggregations, and date filtering.</p>
                     
                     <h5 class="text-primary mt-3">Inventory Management</h5>
@@ -273,7 +259,8 @@
               
               <div class="achievement-card mt-4">
                 <h3><i class="bx bx-test-tube"></i> Testing & Validation</h3>
-                <p>Comprehensive testing approach ensures reliability:</p>
+                                  <img src="assets/img/sql-agent-query-history.jpg" alt="Query History Panel" class="img-fluid rounded mb-3">
+                  <p>Track all queries with the comprehensive history panel showing timestamps and performance metrics.</p>
                 <ul>
                   <li><strong>Unit Tests:</strong> 95% code coverage for core components</li>
                   <li><strong>Integration Tests:</strong> End-to-end query validation</li>
