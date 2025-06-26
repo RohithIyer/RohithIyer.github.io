@@ -1,301 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
-  <title>Airbnb Austin Market Analysis | Project Details</title>
-  <meta content="Data-driven market analysis of Airbnb listings in Austin, with visualizations of pricing patterns, host distribution, and seasonal trends." name="description">
-  <meta content="Data Analytics / Visualization / Market Analysis" name="keywords">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-</head>
-<body>
-  <!-- Theme Toggle Button -->
-  <div class="theme-toggle-container">
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <i class="bx bx-moon" id="themeIcon"></i>
-    </button>
+<!-- portfolio-details-airbnb.html | Airbnb Austin Market Analysis -->
+
+<section class="breadcrumbs">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>Airbnb Market Analysis (Austin)</h2>
+      <a href="index.html" class="btn btn-sm btn-primary">Back to Home</a>
+    </div>
+    <p>Interactive Tableau dashboard analyzing Airbnb pricing, availability, and neighborhood trends in Austin, Texas.</p>
   </div>
+</section>
 
-  <main id="main">
-    <section class="breadcrumbs">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Airbnb Austin Market Analysis</h2>
-          <a href="index.html" class="btn btn-sm btn-primary">Back to Home</a>
-        </div>
-        <p>Interactive dashboard analyzing Airbnb listing patterns, price distributions, and seasonal trends in Austin, Texas.</p>
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-8 col-md-12">
+        <img src="assets/img/airbnb-dashboard.JPG" alt="Airbnb Dashboard" class="img-fluid rounded">
       </div>
-    </section>
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-8 col-md-12">
-            <div class="portfolio-details-slider">
-              <div class="align-items-center">
-                <img src="assets/img/airbnb-hotspot-map.JPG" alt="Airbnb Austin Map Visualization" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-12">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Data Analytics / Market Research</li>
-                <li><strong>Technologies</strong>: Tableau, SQL, Python, Pandas</li>
-                <li><strong>Dataset</strong>: Airbnb Austin (2016)</li>
-                <li><strong>Project URL</strong>: <a href="https://github.com/RohithIyer/ProjectRepository/tree/main/Airbnb%20Dashboard" target="_blank">GitHub Repo</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>Project Overview</h2>
-              <p>
-                This project delivers comprehensive insights into the Airbnb market in Austin, Texas through interactive visualizations and data analysis. By examining listing patterns, price distributions, and seasonal trends, the dashboard provides actionable intelligence for hosts, travelers, and local businesses.
-              </p>
-            </div>
-          </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="portfolio-info">
+          <h3>Project Summary</h3>
+          <ul>
+            <li><strong>Category:</strong> Market Research / Data Visualization</li>
+            <li><strong>Technologies:</strong> Tableau, SQL, Python, Pandas</li>
+            <li><strong>Dataset:</strong> Airbnb Austin (2016)</li>
+            <li><strong>Repo:</strong> <a href="https://github.com/RohithIyer/ProjectRepository/tree/main/Airbnb%20Dashboard" target="_blank">GitHub</a></li>
+          </ul>
         </div>
-        
-        <!-- Research Questions Section -->
-        <div class="row mt-5">
-          <div class="col-12">
-            <div class="portfolio-description">
-              <h2>Research Questions & Audience</h2>
-              
-              <div class="row">
-                <div class="col-lg-6 col-md-12">
-                  <div class="achievement-card mb-4">
-                    <h3><i class="bx bx-question-mark"></i> Key Questions</h3>
-                    <ul>
-                      <li>Who are the popular hosts in Austin?</li>
-                      <li>What is the average price in popular neighborhoods?</li>
-                      <li>What are the popular hotspots for Airbnb listings?</li>
-                      <li>How does availability change throughout the year?</li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div class="col-lg-6 col-md-12">
-                  <div class="achievement-card mb-4">
-                    <h3><i class="bx bx-group"></i> Target Audience</h3>
-                    <ul>
-                      <li>Potential Renters seeking accommodations</li>
-                      <li>Property Owners looking to list on Airbnb</li>
-                      <li>Market Analysts studying sharing economy</li>
-                      <li>Rental Car Companies planning partnerships</li>
-                      <li>Restaurants targeting tourist areas</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="portfolio-description">
+          <h2>Overview</h2>
+          <p>Analyzed historical Airbnb data to uncover pricing insights, identify popular host zones, and visualize seasonal availability patterns for better decision-making by property owners and travelers.</p>
         </div>
-        
-        <!-- Methodology Section -->
-        <div class="row mt-5">
-          <div class="col-12">
-            <div class="portfolio-description">
-              <h2>Methodology</h2>
-              
-              <div class="achievement-card mb-4">
-                <h3><i class="bx bx-data"></i> Data Processing & Integration</h3>
-                <p>
-                  The analysis began with extensive data cleaning and preparation. From the provided dataset, I selected and merged three key files (listings.csv, listings_summary.csv, and calendar.csv) using Tableau's union function. This integration created a comprehensive dataset capturing both property characteristics and temporal patterns.
-                </p>
-                <div class="text-center my-4">
-                  <img src="assets/img/airbnb-accommodations.JPG" alt="Data Processing Visualization" class="img-fluid rounded" style="max-height: 400px;">
-                </div>
-              </div>
-              
-              <div class="achievement-card mb-4">
-                <h3><i class="bx bx-analyse"></i> Variable Analysis</h3>
-                <p>
-                  Eight critical variables were identified as key factors affecting Airbnb listing performance:
-                </p>
-                <ul>
-                  <li>Host Name & Neighborhood (geographical context)</li>
-                  <li>Price (economic indicator)</li>
-                  <li>Property Type & Room Type (accommodation characteristics)</li>
-                  <li>Availability & Occupancy (demand indicators)</li>
-                  <li>Review Score Rating (quality measure)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Key Insights Section -->
-        <div class="row mt-5">
-          <div class="col-12">
-            <div class="portfolio-description">
-              <h2>Key Insights & Visualizations</h2>
-              
-              <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4">
-                  <div class="card bg-dark h-100">
-                    <div class="card-body">
-                      <h4 class="card-title text-primary">Host Distribution</h4>
-                      <img src="assets/img/airbnb-hosts-chart.JPG" alt="Austin Preferred Hosts Chart" class="img-fluid rounded mb-3">
-                      <p>
-                        One host ("Erica") dominated the Austin market with significantly more listings than any competitor. The next highest host had only about one-third as many properties, indicating potential market concentration issues.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="col-lg-6 col-md-12 mb-4">
-                  <div class="card bg-dark h-100">
-                    <div class="card-body">
-                      <h4 class="card-title text-primary">Neighborhood Pricing</h4>
-                      <img src="assets/img/airbnb-pricing-boxplot.JPG" alt="Pricing Boxplot" class="img-fluid rounded mb-3">
-                      <p>
-                        Pricing analysis revealed distinct patterns across neighborhoods:
-                      </p>
-                      <ul>
-                        <li>Burlingame: Widest price range, suggesting diverse property types</li>
-                        <li>West Austin & Cat Mountain: Concentrated high prices with premium outliers</li>
-                        <li>Steiner Ranch: Wide range but lower median, indicating value opportunities</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4">
-                  <div class="card bg-dark h-100">
-                    <div class="card-body">
-                      <h4 class="card-title text-primary">Seasonal Availability</h4>
-                      <img src="assets/img/airbnb-seasonal-trends.JPG" alt="Seasonal Availability Chart" class="img-fluid rounded mb-3">
-                      <p>
-                        The analysis uncovered distinct seasonal patterns:
-                      </p>
-                      <ul>
-                        <li>February to March: Significant availability increase, likely due to seasonal events ending</li>
-                        <li>May to June: Small peak in bookings at the start of summer travel</li>
-                        <li>August to November: Substantial availability increase as summer ends and academic year begins</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="col-lg-6 col-md-12 mb-4">
-                  <div class="card bg-dark h-100">
-                    <div class="card-body">
-                      <h4 class="card-title text-primary">Geographic Hotspots</h4>
-                      <img src="assets/img/airbnb-hotspot-map.JPG" alt="Geographic Hotspots Map" class="img-fluid rounded mb-3">
-                      <p>
-                        Geospatial analysis identified clear patterns:
-                      </p>
-                      <ul>
-                        <li>Centralized Hotspots: High concentration of listings in central Austin near attractions and business districts</li>
-                        <li>Outlying Areas: Lower listing density in peripheral neighborhoods, correlating with lower demand and prices</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Business Recommendations Section -->
-        <div class="row mt-5">
-          <div class="col-12">
-            <div class="portfolio-description">
-              <h2>Business Recommendations</h2>
-              
-              <div class="achievement-card mb-4">
-                <h3><i class="bx bx-bulb"></i> Strategic Insights</h3>
-                <p>Based on the analysis, I developed actionable recommendations for different stakeholders:</p>
-                
-                <h4>For Travelers:</h4>
-                <p>Utilize the interactive dashboard to filter available properties based on neighborhood, room type, and price range, optimizing accommodation selection for specific needs.</p>
-                
-                <h4>For Local Businesses:</h4>
-                <p>Leverage the identified popular localities and peak visitor seasons (March, July) to optimize marketing campaigns, staffing, and inventory management during high-demand periods.</p>
-                
-                <h4>For Airbnb & Property Owners:</h4>
-                <p>Increase property availability during peak seasons and implement dynamic pricing strategies based on seasonal demand patterns. Focus quality improvement efforts in areas with lower review scores to enhance market competitiveness.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Technical Implementation -->
-        <div class="row mt-5">
-          <div class="col-12">
-            <div class="portfolio-description">
-              <h2>Technical Implementation</h2>
-              
-              <div class="achievement-card mb-4">
-                <h3><i class="bx bx-code-block"></i> Tools & Techniques</h3>
-                <p>
-                  This project utilized a comprehensive technical stack:
-                </p>
-                <ul>
-                  <li><strong>Data Cleaning:</strong> Python with Pandas for initial data wrangling and normalization</li>
-                  <li><strong>Database Management:</strong> SQL for data aggregation and complex queries</li>
-                  <li><strong>Visualization:</strong> Tableau for creating the interactive dashboard and advanced visualizations</li>
-                  <li><strong>Analysis Methods:</strong> Statistical analysis for pricing distributions, time series analysis for seasonal patterns</li>
-                </ul>
-                
-                <p>
-                  The interactive dashboard implements multiple filter capabilities, allowing users to explore the data by neighborhood, price range, property type, and time period. This provides customized insights tailored to specific user interests.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
       </div>
-    </section>
-  </main>
-  
-  <footer>
-    &copy; 2025 Rohith Krishnamurthy. All rights reserved.
-  </footer>
+    </div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true,
-      mirror: false
-    });
+    <div class="portfolio-description mt-5">
+      <h2>Problem Statement</h2>
+      <p>Short-term rental markets are highly dynamic, and hosts struggle to set competitive prices or optimize availability without data-driven insights.</p>
 
-    // Theme Toggle Functionality
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const body = document.body;
+      <h2>Solution Approach</h2>
+      <ul>
+        <li>Processed and joined multiple Airbnb datasets (listings, calendar, reviews) using Python and SQL.</li>
+        <li>Built an interactive Tableau dashboard with filters for room type, price range, and location.</li>
+        <li>Performed temporal and spatial trend analysis to identify pricing outliers and demand hotspots.</li>
+      </ul>
 
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    body.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
+      <h2>Key Features</h2>
+      <ul>
+        <li>📌 Map view of Airbnb hotspots by neighborhood and listing density.</li>
+        <li>📅 Availability vs. booking trends throughout the year.</li>
+        <li>📈 Price comparisons across property types and localities.</li>
+      </ul>
 
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = body.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      
-      body.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      updateThemeIcon(newTheme);
-    });
+      <h2>Impact</h2>
+      <p>The dashboard provided hosts with actionable insights for price optimization and helped renters explore accommodation patterns by season and location.</p>
 
-    function updateThemeIcon(theme) {
-      if (theme === 'dark') {
-        themeIcon.classList.remove('bx-sun');
-        themeIcon.classList.add('bx-moon');
-      } else {
-        themeIcon.classList.remove('bx-moon');
-        themeIcon.classList.add('bx-sun');
-      }
-    }
-  </script>
-</body>
-</html>
+      <h2>Future Enhancements</h2>
+      <ul>
+        <li>Integrate dynamic pricing algorithms for hosts.</li>
+        <li>Enhance dashboard with predictive analytics for booking trends.</li>
+      </ul>
+    </div>
+  </div>
+</section>
