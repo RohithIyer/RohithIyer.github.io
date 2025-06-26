@@ -2,27 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project1</title>
+  <title>Financial Risk Prediction System</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body data-aos-easing="ease" data-aos-duration="800" data-aos-delay="0">
-  <main><!-- portfolio-details-project1.html | Financial Risk Prediction System -->
-<section class="breadcrumbs">
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center">
-      <h2>Financial Risk Prediction System</h2>
-      <a href="index.html" class="btn btn-sm btn-primary">Back to Home</a>
+<body>
+  <section class="section text-center my-5">
+    <div class="container">
+      <h2>💰 Financial Risk Prediction System</h2>
+      <img src="assets/images/financial-risk.JPG" class="img-fluid my-4" alt="Financial Risk Model Output" style="max-height: 400px;">
+      <p class="lead">Built an advanced machine learning pipeline to predict loan default risk using structured customer and credit data.</p>
+
+      <div class="text-start col-lg-8 mx-auto">
+        <h4>🔧 Tools & Tech</h4>
+        <ul>
+          <li>Python (XGBoost, LSTM, pandas), SQL, MLflow for experiment tracking</li>
+          <li>Exploratory Data Analysis, feature engineering, model tuning</li>
+        </ul>
+
+        <h4>📊 Problem & Approach</h4>
+        <p>This project aimed to improve loan approval decision-making by identifying high-risk applicants. Using a dataset of borrower financials, I trained multiple models and optimized hyperparameters using GridSearchCV. Both XGBoost and LSTM models were evaluated for ROC-AUC and precision-recall trade-offs.</p>
+
+        <h4>📈 Key Outcomes</h4>
+        <ul>
+          <li>Achieved 92% classification accuracy using XGBoost</li>
+          <li>Reduced manual processing errors by integrating model predictions into an approval dashboard</li>
+          <li>Versioned and tracked experiments using MLflow</li>
+        </ul>
+
+        <h4>🌐 Live Links</h4>
+        <p><a href="https://github.com/RohithIyer/financial-risk-model" target="_blank">GitHub Repository</a></p>
+      </div>
+
+      <div class="mt-5">
+        <a href="index.html" class="btn btn-outline-secondary">⬅️ Back to Home</a>
+      </div>
     </div>
-    <p>Machine learning system for predicting loan defaults and interest rates, optimized for performance and business impact.</p>
-  </div>
-</section>
-<section id="portfolio-details" class="portfolio-details"> ... </section></main>
+  </section>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

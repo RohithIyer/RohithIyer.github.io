@@ -8,8 +8,39 @@
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+
+<style>
+  body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+  body.dark-mode .card {
+    background-color: #1e1e1e;
+    border-color: #444;
+  }
+  .theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 999;
+  }
+</style>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  }
+  window.onload = function () {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  }
+</script>
+
 </head>
 <body>
+<button class="btn btn-outline-secondary theme-toggle" onclick="toggleTheme()">🌗</button>
    class="hero text-center p-5 bg-light">
   <div class="container">
     <img src="assets/images/profile.jpg" alt="Rohith Krishnamurthy" class="rounded-circle mb-3" style="height: 120px;">
@@ -146,87 +177,8 @@
     </div>
   </div>
 </section>
-
-<section id="projects" class="section text-center my-5">
-  <div class="container">
-    <h2>📊 Projects</h2>
-    <div class="row justify-content-center">
-
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img src="assets/images/financial-risk.JPG" class="card-img-top" alt="Financial Risk Prediction">
-          <div class="card-body">
-            <h5 class="card-title">Financial Risk Prediction</h5>
-            <p class="card-text">Predict loan default risk using ML (XGBoost, LSTM) with 92% accuracy. Built using SQL + MLflow.</p>
-            <a href="portfolio-details-project1.html" class="btn btn-outline-primary">Details</a>
-            <a href="https://github.com/RohithIyer/financial-risk-model" class="btn btn-outline-dark">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img src="assets/images/demand_forecast.JPG" class="card-img-top" alt="Taxi Optimization">
-          <div class="card-body">
-            <h5 class="card-title">Taxi Service Optimization</h5>
-            <p class="card-text">Built forecasting system for ride demand (88.2% accuracy) and revenue trends using Streamlit, XGBoost.</p>
-            <a href="portfolio-details-taxi.html" class="btn btn-outline-primary">Details</a>
-            <a href="https://github.com/RohithIyer/taxi-service-optimization" class="btn btn-outline-dark">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img src="assets/images/airbnb-dashboard.JPG" class="card-img-top" alt="Airbnb Market Analysis">
-          <div class="card-body">
-            <h5 class="card-title">Airbnb Austin Market Analysis</h5>
-            <p class="card-text">Analyzed pricing and availability trends in Austin using SQL + Tableau dashboards.</p>
-            <a href="portfolio-details-airbnb.html" class="btn btn-outline-primary">Details</a>
-            <a href="https://github.com/RohithIyer/ProjectRepository/tree/main/Airbnb%20Dashboard" class="btn btn-outline-dark">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img src="assets/images/privacy-analyzer-main.JPG" class="card-img-top" alt="Privacy Analyzer">
-          <div class="card-body">
-            <h5 class="card-title">Privacy Policy Analyzer</h5>
-            <p class="card-text">NLP-powered system using spaCy + BERT to extract sensitive data clauses with 94% accuracy.</p>
-            <a href="portfolio-details-privacy.html" class="btn btn-outline-primary">Details</a>
-            <a href="https://github.com/RohithIyer/enhanced_privacy_policy_analyzer" class="btn btn-outline-dark">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img src="assets/images/sql-agent-main.JPG" class="card-img-top" alt="SQL BI Agent">
-          <div class="card-body">
-            <h5 class="card-title">AI SQL BI Agent</h5>
-            <p class="card-text">GPT-4 powered app for natural language to SQL conversion using LangChain and FastAPI.</p>
-            <a href="portfolio-details-sql.html" class="btn btn-outline-primary">Details</a>
-            <a href="https://github.com/RohithIyer/AI-SQL-BI-Agent" class="btn btn-outline-dark">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img src="assets/images/revenue_forecast.JPG" class="card-img-top" alt="Stock Predictor">
-          <div class="card-body">
-            <h5 class="card-title">Stock Market Predictor</h5>
-            <p class="card-text">Sentiment + technical analysis system using LSTM + Dash with 87% trend accuracy.</p>
-            <a href="portfolio-details-stock.html" class="btn btn-outline-primary">Details</a>
-            <a href="https://github.com/RohithIyer/stock-prediction-fresh" class="btn btn-outline-dark">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+<section id="projects" class="section text-center my-5"><div class="container"><h2>📊 Projects</h2></div></section>
+<section id="contact" class="section text-center my-5"><div class="container"><h2>📬 Contact</h2><p>Reach me at <a href="mailto:rohith@example.com">rohith@example.com</a></p></div></section>
 
 
 <!-- Resume Modal -->
@@ -252,6 +204,16 @@
   </div>
 </section>
 
+<footer class="bg-light text-center py-4 mt-5">
+  <div class="container">
+    <a href="assets/resume/Rohith_Krishnamurthy_Resume.pdf" class="btn btn-outline-success mb-2" download>📄 Download Resume</a>
+    <p class="mb-0">
+      <a href="mailto:rohithkrish5915@gmail.com">📧 Email</a> |
+      <a href="https://www.linkedin.com/in/rohkrish5915" target="_blank">🔗 LinkedIn</a> |
+      <a href="https://github.com/RohithIyer" target="_blank">💻 GitHub</a>
+    </p>
+  </div>
+</footer>
 
 </body>
 </html>
