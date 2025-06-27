@@ -1,0 +1,166 @@
+/* Education.css */
+
+.education {
+  background-color: white;
+}
+
+.education-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: var(--border-color);
+}
+
+.education-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+}
+
+.education-icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  z-index: 2;
+  box-shadow: var(--shadow-md);
+}
+
+.education-content {
+  background-color: var(--section-bg);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-md);
+  width: calc(50% - 40px);
+  position: relative;
+}
+
+.education-item:nth-child(odd) .education-content {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.education-item:nth-child(even) .education-content {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.degree {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+}
+
+.institution {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.education-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.gpa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--success-color);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.trophy-icon {
+  font-size: 1rem;
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.achievements li::before {
+  content: '•';
+  position: absolute;
+  left: 8px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .education-timeline::before {
+    left: 30px;
+  }
+  
+  .education-icon {
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .education-content {
+    width: calc(100% - 80px);
+    margin-left: 80px !important;
+    margin-right: 0 !important;
+  }
+  
+  .degree {
+    font-size: 1.1rem;
+  }
+  
+  .institution {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-content {
+    padding: 20px;
+  }
+  
+  .education-meta {
+    font-size: 0.85rem;
+  }
+}

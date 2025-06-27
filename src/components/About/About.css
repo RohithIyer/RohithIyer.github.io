@@ -1,0 +1,40 @@
+/* About.css */
+
+.about {
+  background-color: white;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-text {
+  text-align: left;
+}
+
+.about-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.about-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Highlight important text */
+.about-paragraph strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-paragraph {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
