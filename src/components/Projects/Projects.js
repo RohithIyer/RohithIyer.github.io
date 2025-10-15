@@ -1,5 +1,5 @@
-﻿import React, { useState } from 'react';
-import { projectsData, getCategories, getProjectsByCategory } from '../../data/portfolioData';
+import React, { useState } from 'react';
+import { getCategories, getProjectsByCategory } from '../../data/portfolioData';
 import './Projects.css';
 
 const Projects = () => {
