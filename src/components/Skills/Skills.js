@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { skillsData, getSkillCategories } from '../../data/skillsData';
 import './Skills.css';
 

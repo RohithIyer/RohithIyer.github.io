@@ -1,4 +1,4 @@
-﻿// src/data/portfolioData.js
+// src/data/portfolioData.js
 
 export const personalInfo = {
   name: "Rohith Krishnamurthy",
