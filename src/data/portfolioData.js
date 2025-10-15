@@ -65,7 +65,7 @@ export const education = [
     degree: "PG Diploma in Data Science",
     specialization: "Data Science",
     school: "International Institute of Information Technology, Bangalore",
-    location: "Bangalore, India,
+    location: "Bangalore, India",
     duration: "2018 - 2019",
     gpa: "3.4/4.0",
     coursework: [
