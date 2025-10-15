@@ -15,8 +15,8 @@ export const personalInfo = {
 export const heroImages = [
   "/images/banner1.jpg",
   "/images/banner2.jpg",
-  "/images/dashboard_header.jpg",
-  "/images/financial-default-by-purpose.jpg"
+  "/images/banner3.jpg",
+  "/images/banner4.jpg"
 ];
 
 export const aboutMe = `Hi, I’m Rohith Krishnamurthy — a data professional with a strong foundation in analytics, engineering, and business impact.
@@ -121,7 +121,7 @@ export const experience = [
     type: "Part-time",
     description: "Oversaw operations and analytics for 10+ tech events, applying data strategy to drive event growth, sponsor ROI, and audience engagement.",
     Responsibilities: [
-      "Built 10+ Tableau dashboards tracking registrations, attendance, and sponsor ROI, boosting event participation by 20%."
+      "Built 10+ Tableau dashboards tracking registrations, attendance, and sponsor ROI, boosting event participation by 20%.",
       "Analyzed engagement from 5,000+ participants using Python + SQL (survey/A-B testing) to optimize event format and speaker lineups.",
       "Automated reporting workflows with Python scripts, reducing manual reporting effort by 35% and improving error detection.",
       "Designed Excel-based resource allocation model, saving $50K annually while improving sponsor package planning."
