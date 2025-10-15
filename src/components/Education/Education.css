@@ -1,30 +1,28 @@
 /* Education.css */
 
 .education {
-  background-color: white;
+  background: var(--section-bg);
 }
 
 .education-timeline {
-  max-width: 800px;
-  margin: 0 auto;
   position: relative;
+  margin-left: 24px;
 }
 
 .education-timeline::before {
   content: '';
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  left: 16px;
   width: 2px;
-  height: 100%;
-  background-color: var(--border-color);
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.4), rgba(148, 163, 184, 0.25));
 }
 
 .education-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 50px;
   position: relative;
+  padding-left: 88px;
+  margin-bottom: 48px;
 }
 
 .education-item:last-child {
@@ -33,74 +31,60 @@
 
 .education-icon {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
   width: 50px;
   height: 50px;
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 50%;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--primary-color), rgba(67, 56, 202, 0.9));
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  z-index: 2;
-  box-shadow: var(--shadow-md);
+  font-size: 1.4rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .education-content {
-  background-color: var(--section-bg);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: var(--shadow-md);
-  width: calc(50% - 40px);
-  position: relative;
-}
-
-.education-item:nth-child(odd) .education-content {
-  margin-right: auto;
-  margin-left: 0;
-}
-
-.education-item:nth-child(even) .education-content {
-  margin-left: auto;
-  margin-right: 0;
+  background: var(--surface-color);
+  border-radius: var(--radius-md);
+  padding: 1.8rem 2rem;
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: var(--shadow-xs);
 }
 
 .degree {
-  font-size: 1.3rem;
+  font-size: 1.28rem;
   font-weight: 700;
-  color: var(--heading-color);
-  margin-bottom: 8px;
+  margin-bottom: 0.35rem;
 }
 
 .institution {
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: var(--primary-color);
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
 }
 
 .education-meta {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 15px;
+  gap: 14px;
   font-size: 0.95rem;
-  color: var(--text-light);
+  color: rgba(15, 23, 42, 0.65);
+  margin-bottom: 1rem;
 }
 
 .gpa-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--success-color);
-  color: white;
-  padding: 6px 16px;
-  border-radius: 20px;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(22, 163, 74, 0.12);
+  color: #166534;
   font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 15px;
+  margin-bottom: 1.1rem;
 }
 
 .trophy-icon {
@@ -110,57 +94,58 @@
 .achievements {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
 }
 
 .achievements li {
   position: relative;
-  padding-left: 25px;
-  margin-bottom: 8px;
-  color: var(--text-color);
+  padding-left: 24px;
+  color: rgba(15, 23, 42, 0.75);
+  line-height: 1.7;
 }
 
 .achievements li::before {
-  content: '•';
+  content: '';
   position: absolute;
-  left: 8px;
-  color: var(--primary-color);
-  font-weight: bold;
+  left: 0;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
+  .education-timeline {
+    margin-left: 0;
+  }
+
   .education-timeline::before {
-    left: 30px;
+    left: 22px;
   }
-  
-  .education-icon {
-    left: 30px;
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+
+  .education-item {
+    padding-left: 80px;
   }
-  
+
   .education-content {
-    width: calc(100% - 80px);
-    margin-left: 80px !important;
-    margin-right: 0 !important;
-  }
-  
-  .degree {
-    font-size: 1.1rem;
-  }
-  
-  .institution {
-    font-size: 1rem;
+    padding: 1.6rem 1.6rem;
   }
 }
 
-@media (max-width: 480px) {
-  .education-content {
-    padding: 20px;
+@media (max-width: 560px) {
+  .education-timeline::before {
+    display: none;
   }
-  
-  .education-meta {
-    font-size: 0.85rem;
+
+  .education-item {
+    padding-left: 0;
+  }
+
+  .education-icon {
+    position: relative;
+    margin-bottom: 16px;
   }
 }

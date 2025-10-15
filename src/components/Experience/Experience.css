@@ -1,28 +1,28 @@
 /* Experience.css */
 
 .experience {
-  background-color: var(--section-bg);
+  background: var(--surface-color);
 }
 
 .experience-timeline {
-  max-width: 900px;
-  margin: 0 auto;
   position: relative;
+  margin-left: 24px;
 }
 
 .experience-timeline::before {
   content: '';
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  left: 16px;
   width: 2px;
-  height: 100%;
-  background-color: var(--border-color);
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.4), rgba(148, 163, 184, 0.25));
 }
 
 .experience-item {
   position: relative;
-  margin-bottom: 60px;
+  padding-left: 92px;
+  margin-bottom: 52px;
 }
 
 .experience-item:last-child {
@@ -31,132 +31,115 @@
 
 .timeline-marker {
   position: absolute;
-  left: 50%;
   top: 0;
-  transform: translateX(-50%);
-  width: 45px;
-  height: 45px;
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 50%;
+  left: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(59, 130, 246, 0.9));
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  z-index: 2;
-  box-shadow: var(--shadow-md);
+  font-size: 1.35rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .experience-card {
-  background-color: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: var(--shadow-md);
-  width: calc(50% - 40px);
+  background: var(--surface-color);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem 2.2rem;
   transition: var(--transition);
 }
 
-.experience-item.left .experience-card {
-  margin-right: auto;
-}
-
-.experience-item.right .experience-card {
-  margin-left: auto;
-}
-
 .experience-card:hover {
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
 }
 
 .position {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  color: var(--heading-color);
-  margin-bottom: 8px;
+  margin-bottom: 0.35rem;
 }
 
 .company {
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--primary-color);
-  margin-bottom: 15px;
+  margin-bottom: 1.1rem;
 }
 
 .experience-meta {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-  color: var(--text-light);
+  gap: 14px 24px;
+  margin-bottom: 1.4rem;
+  font-size: 0.96rem;
+  color: rgba(15, 23, 42, 0.65);
 }
 
 .experience-meta span {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
 }
 
 .responsibilities {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
 }
 
 .responsibilities li {
   position: relative;
-  padding-left: 30px;
-  margin-bottom: 12px;
-  color: var(--text-color);
-  line-height: 1.6;
+  padding-left: 26px;
+  line-height: 1.75;
+  color: rgba(15, 23, 42, 0.75);
 }
 
 .responsibilities li::before {
-  content: '→';
+  content: '▹';
   position: absolute;
-  left: 8px;
+  left: 0;
   color: var(--primary-color);
-  font-weight: bold;
+  font-weight: 700;
 }
 
-/* Responsive */
+@media (max-width: 900px) {
+  .experience-card {
+    padding: 1.8rem 1.85rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .experience-timeline {
+    margin-left: 0;
+  }
+
   .experience-timeline::before {
-    left: 30px;
+    left: 22px;
   }
-  
-  .timeline-marker {
-    left: 30px;
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
-  }
-  
-  .experience-card {
-    width: calc(100% - 80px);
-    margin-left: 80px !important;
-    margin-right: 0 !important;
-  }
-  
-  .position {
-    font-size: 1.1rem;
-  }
-  
-  .company {
-    font-size: 1rem;
+
+  .experience-item {
+    padding-left: 88px;
   }
 }
 
-@media (max-width: 480px) {
-  .experience-card {
-    padding: 20px;
+@media (max-width: 560px) {
+  .experience-timeline::before {
+    display: none;
   }
-  
-  .experience-meta {
-    font-size: 0.85rem;
+
+  .experience-item {
+    padding-left: 0;
   }
-  
-  .responsibilities li {
-    padding-left: 25px;
-    font-size: 0.95rem;
+
+  .timeline-marker {
+    position: relative;
+    margin-bottom: 18px;
   }
 }

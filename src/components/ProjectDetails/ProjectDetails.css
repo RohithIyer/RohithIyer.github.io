@@ -2,63 +2,70 @@
 
 .project-details-page {
   min-height: 100vh;
-  background-color: var(--section-bg);
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.92), rgba(244, 247, 253, 0.96));
+  padding-bottom: 80px;
 }
 
 .details-header {
-  background-color: white;
-  padding: 20px 0;
-  box-shadow: var(--shadow-md);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  padding: 24px 0;
+  position: sticky;
+  top: 0;
+  z-index: 40;
 }
 
 .back-button {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  background-color: var(--section-bg);
-  color: var(--text-color);
-  border: none;
-  border-radius: 8px;
-  font-weight: 500;
-  cursor: pointer;
+  gap: 0.6rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(248, 250, 252, 0.9);
+  color: rgba(15, 23, 42, 0.8);
+  font-weight: 600;
   transition: var(--transition);
 }
 
-.back-button:hover {
-  background-color: var(--primary-color);
-  color: white;
-  transform: translateX(-5px);
+.back-button:hover,
+.back-button:focus-visible {
+  color: var(--primary-color);
+  border-color: rgba(37, 99, 235, 0.35);
+  transform: translateX(-4px);
 }
 
 .project-details {
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
 .details-content {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
-  background-color: white;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: var(--shadow-xl);
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  padding: 48px 52px;
+  box-shadow: var(--shadow-lg);
 }
 
 .project-name {
-  font-size: 2.5rem;
+  font-size: clamp(2.2rem, 5vw, 3rem);
   font-weight: 800;
-  color: var(--heading-color);
-  margin-bottom: 30px;
   text-align: center;
+  margin-bottom: 32px;
+  letter-spacing: -0.01em;
 }
 
 .project-hero-image {
   width: 100%;
-  height: 400px;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  border-radius: 15px;
-  margin-bottom: 40px;
-  box-shadow: var(--shadow-lg);
+  margin-bottom: 42px;
+  box-shadow: var(--shadow-md);
+  background: var(--section-bg);
 }
 
 .project-hero-image img {
@@ -69,124 +76,131 @@
 
 .details-body h2,
 .details-body h3 {
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 44px;
+  margin-bottom: 18px;
+  font-weight: 700;
   color: var(--heading-color);
 }
 
 .lead-text {
   font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-color);
-  margin-bottom: 30px;
+  line-height: 1.85;
+  color: rgba(15, 23, 42, 0.78);
+}
+
+.tech-stack {
+  margin-top: 32px;
 }
 
 .tech-tags-detailed {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 30px;
 }
 
 .tech-tag-detailed {
-  padding: 8px 20px;
-  background-color: var(--section-bg);
-  color: var(--text-color);
-  border-radius: 20px;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.8);
   font-weight: 500;
-  border: 2px solid var(--border-color);
+  color: rgba(15, 23, 42, 0.7);
 }
 
 .achievements-list {
   list-style: none;
+  display: grid;
+  gap: 14px;
+  margin: 0;
   padding: 0;
 }
 
 .achievements-list li {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 15px;
-  padding: 15px;
-  background-color: var(--section-bg);
-  border-radius: 10px;
+  gap: 14px;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-sm);
+  background: rgba(248, 250, 252, 0.95);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  color: rgba(15, 23, 42, 0.75);
+  line-height: 1.7;
   transition: var(--transition);
 }
 
 .achievements-list li:hover {
-  background-color: #e0f2fe;
+  border-color: rgba(37, 99, 235, 0.35);
 }
 
 .check-icon {
   color: var(--success-color);
   font-size: 1.2rem;
-  flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 0.2rem;
 }
 
 .project-actions {
   text-align: center;
-  margin: 40px 0;
+  margin-top: 48px;
 }
 
 .github-button {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 15px 40px;
-  background-color: #24292e;
-  color: white;
-  border-radius: 10px;
-  font-size: 1.1rem;
+  gap: 0.65rem;
+  padding: 0.85rem 2.2rem;
+  border-radius: 12px;
+  background: #111827;
+  color: #ffffff;
   font-weight: 600;
   transition: var(--transition);
 }
 
 .github-button:hover {
-  background-color: #1a1e22;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .other-projects {
-  margin-top: 60px;
+  margin-top: 64px;
   padding-top: 40px;
-  border-top: 2px solid var(--border-color);
+  border-top: 1px solid rgba(226, 232, 240, 0.9);
 }
 
 .related-projects {
+  margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  margin-top: 20px;
 }
 
 .related-project-card {
-  background-color: var(--section-bg);
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-md);
+  background: rgba(248, 250, 252, 0.95);
+  border: 1px solid rgba(226, 232, 240, 0.8);
   overflow: hidden;
   transition: var(--transition);
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-.related-project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
+  color: inherit;
 }
 
 .related-project-card img {
   width: 100%;
-  height: 150px;
+  height: 140px;
   object-fit: cover;
 }
 
 .related-project-card h4 {
-  padding: 15px;
+  padding: 1rem 1.2rem;
   font-size: 1rem;
   font-weight: 600;
   color: var(--heading-color);
+}
+
+.related-project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+  border-color: rgba(37, 99, 235, 0.3);
 }
 
 .project-not-found {
@@ -195,39 +209,53 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1.2rem;
   text-align: center;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .details-content {
-    padding: 30px 20px;
+    padding: 40px 36px;
   }
-  
-  .project-name {
-    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .details-header {
+    position: static;
   }
-  
+
+  .project-details {
+    padding: 60px 0;
+  }
+
+  .details-content {
+    padding: 32px 26px;
+  }
+
   .project-hero-image {
-    height: 300px;
+    margin-bottom: 32px;
   }
-  
+
   .related-projects {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
+  .details-content {
+    padding: 28px 20px;
+  }
+
   .project-name {
-    font-size: 1.5rem;
+    font-size: 1.85rem;
   }
-  
+
   .project-hero-image {
-    height: 200px;
+    aspect-ratio: 4 / 3;
   }
-  
-  .tech-tag-detailed {
-    font-size: 0.85rem;
-    padding: 6px 15px;
+
+  .github-button {
+    width: 100%;
+    justify-content: center;
   }
 }

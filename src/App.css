@@ -1,27 +1,31 @@
-/* App.css - Main application styles */
-
 :root {
   --primary-color: #2563eb;
-  --secondary-color: #64748b;
-  --accent-color: #3b82f6;
-  --success-color: #10b981;
+  --primary-dark: #1d4ed8;
+  --accent-color: #4338ca;
+  --success-color: #16a34a;
   --warning-color: #f59e0b;
   --danger-color: #ef4444;
-  --background-color: #ffffff;
+  --background-color: #f4f6fb;
   --section-bg: #f8fafc;
+  --surface-color: #ffffff;
   --text-color: #1e293b;
   --text-light: #64748b;
   --heading-color: #0f172a;
   --border-color: #e2e8f0;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
-  --max-width: 1200px;
+  --shadow-xs: 0 2px 6px rgba(15, 23, 42, 0.06);
+  --shadow-sm: 0 8px 18px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 16px 40px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 26px 60px rgba(15, 23, 42, 0.12);
+  --shadow-xl: 0 36px 80px rgba(15, 23, 42, 0.14);
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --transition: all 0.25s ease;
+  --max-width: 1120px;
+  --header-height: 72px;
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -29,17 +33,18 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--background-color);
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   color: var(--text-color);
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .App {
@@ -52,98 +57,191 @@ main {
   flex: 1;
 }
 
-/* Container */
 .container {
-  max-width: var(--max-width);
+  width: min(100% - 40px, var(--max-width));
   margin: 0 auto;
-  padding: 0 20px;
 }
 
-/* Section Styles */
 section {
-  padding: 80px 0;
+  position: relative;
+  padding: 96px 0;
 }
 
-section:nth-child(even) {
+section:nth-of-type(odd) {
+  background-color: var(--surface-color);
+}
+
+section:nth-of-type(even) {
   background-color: var(--section-bg);
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-title {
-  font-size: 2.5rem;
+  position: relative;
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
   font-weight: 700;
   color: var(--heading-color);
   margin-bottom: 20px;
-  position: relative;
 }
 
 .section-title::after {
   content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
+  display: block;
+  width: 72px;
   height: 4px;
+  margin: 18px auto 0;
+  border-radius: 999px;
   background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-  border-radius: 2px;
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-light);
-  max-width: 600px;
   margin: 0 auto;
+  max-width: 520px;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--heading-color);
   line-height: 1.3;
 }
 
 p {
-  line-height: 1.8;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  color: var(--text-color);
 }
 
-/* Links */
+p:last-child {
+  margin-bottom: 0;
+}
+
 a {
-  color: var(--primary-color);
+  color: inherit;
   text-decoration: none;
   transition: var(--transition);
 }
 
 a:hover {
-  color: var(--accent-color);
+  color: var(--primary-color);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
-  
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary-color);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: rgba(37, 99, 235, 0.12);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.btn-text:hover,
+.btn-text:focus-visible {
+  color: var(--primary-dark);
+  transform: translateX(2px);
+}
+
+:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, 0.4);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
   section {
-    padding: 60px 0;
+    padding: 84px 0;
   }
-  
+
   .section-header {
-    margin-bottom: 40px;
+    margin-bottom: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 32px, var(--max-width));
+  }
+
+  section {
+    padding: 72px 0;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 5vw, 2.4rem);
+  }
+
+  .section-subtitle {
+    font-size: 0.98rem;
   }
 }
 
 @media (max-width: 480px) {
-  .section-title {
-    font-size: 1.75rem;
-  }
-  
   section {
-    padding: 40px 0;
+    padding: 56px 0;
+  }
+
+  .section-header {
+    margin-bottom: 44px;
+  }
+
+  .section-title::after {
+    margin-top: 14px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
   }
 }

@@ -1,200 +1,212 @@
 /* Projects.css */
 
 .projects {
-  background-color: white;
+  background: var(--surface-color);
+}
+
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.filter-btn {
+  padding: 0.65rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(248, 250, 252, 0.85);
+  color: rgba(15, 23, 42, 0.72);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+  color: var(--primary-color);
+  border-color: rgba(37, 99, 235, 0.35);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: var(--shadow-xs);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
 }
 
-.project-tile {
-  background-color: white;
-  border-radius: 15px;
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: var(--shadow-xs);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
   transition: var(--transition);
 }
 
-.project-tile:hover {
-  box-shadow: var(--shadow-xl);
-}
-
-.project-link {
-  text-decoration: none;
-  color: inherit;
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
 }
 
 .project-image {
   position: relative;
-  height: 250px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  background-color: var(--section-bg);
+  background: var(--section-bg);
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
 }
 
-.project-tile:hover .project-image img {
+.project-card:hover .project-image img {
   transform: scale(1.05);
 }
 
 .project-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(37, 99, 235, 0.9);
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(6px);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: var(--transition);
+  pointer-events: none;
 }
 
-.project-tile:hover .project-overlay {
+.project-overlay.visible,
+.project-card:hover .project-overlay {
   opacity: 1;
+  pointer-events: auto;
 }
 
-.view-details {
-  color: white;
-  font-size: 1.1rem;
+.view-project-btn {
+  padding: 0.65rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
   font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.view-project-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .project-content {
-  padding: 25px;
+  padding: 1.9rem 1.8rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.project-category {
+  align-self: flex-start;
+  padding: 0.35rem 0.9rem;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary-color);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .project-title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--heading-color);
-  margin-bottom: 10px;
 }
 
 .project-description {
-  color: var(--text-color);
-  line-height: 1.6;
-  margin-bottom: 15px;
-  font-size: 0.95rem;
+  color: rgba(15, 23, 42, 0.72);
+  line-height: 1.7;
+  font-size: 0.98rem;
 }
 
 .project-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 20px;
 }
 
 .tech-tag {
-  padding: 5px 12px;
-  background-color: var(--section-bg);
-  color: var(--text-color);
-  border-radius: 15px;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.7);
   font-size: 0.85rem;
   font-weight: 500;
+  color: rgba(15, 23, 42, 0.7);
 }
 
 .tech-tag.more {
-  background-color: var(--primary-color);
-  color: white;
+  background: rgba(37, 99, 235, 0.14);
+  color: var(--primary-color);
+  border-color: rgba(37, 99, 235, 0.24);
 }
 
 .project-links {
   display: flex;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
 }
 
-.github-link,
-.details-link {
+.project-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: var(--transition);
-}
-
-.github-link {
-  background-color: #24292e;
-  color: white;
-}
-
-.github-link:hover {
-  background-color: #1a1e22;
-  color: white;
-  transform: translateY(-2px);
-}
-
-.details-link {
-  background-color: var(--primary-color);
-  color: white;
-}
-
-.details-link:hover {
-  background-color: var(--accent-color);
-  color: white;
-  transform: translateY(-2px);
-}
-
-.view-more-container {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.view-more-button {
-  padding: 12px 40px;
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  font-size: 1rem;
+  gap: 8px;
+  padding: 0.55rem 1.1rem;
+  border-radius: 10px;
   font-weight: 600;
-  cursor: pointer;
+  font-size: 0.92rem;
+  color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.15);
   transition: var(--transition);
 }
 
-.view-more-button:hover {
-  background-color: var(--accent-color);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+.project-link svg {
+  flex-shrink: 0;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
+.project-link:hover,
+.project-link:focus-visible {
+  background: rgba(37, 99, 235, 0.18);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .project-content {
+    padding: 1.7rem 1.5rem 1.6rem;
   }
 }
 
 @media (max-width: 480px) {
-  .project-content {
-    padding: 20px;
-  }
-  
-  .project-title {
-    font-size: 1.1rem;
-  }
-  
   .project-links {
     flex-direction: column;
   }
-  
-  .github-link,
-  .details-link {
+
+  .project-link {
     width: 100%;
     justify-content: center;
   }
