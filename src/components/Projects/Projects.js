@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-import { getCategories, getProjectsByCategory } from '../../data/portfolioData';
+﻿import React, { useState } from 'react';
+import { projectsData } from '../../data/portfolioData';
 import './Projects.css';
 
 const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredProject, setHoveredProject] = useState(null);
-  const categories = getCategories();
-  const filteredProjects = getProjectsByCategory(selectedCategory);
+  const filteredProjects = projectsData;
 
   const handleImageError = (e) => {
     const img = e.target;
@@ -47,18 +45,6 @@ const Projects = () => {
         <div className="section-header">
           <h2 className="section-title">My Projects</h2>
           <p className="section-subtitle">Explore my recent work and achievements</p>
-        </div>
-
-        <div className="project-filters">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`filter-btn ${selectedCategory === category ? 'active' : ''}`}
-              onClick={() => setSelectedCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
         </div>
 
         <div className="projects-grid">

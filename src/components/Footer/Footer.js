@@ -1,25 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { personalInfo } from '../../data/portfolioData';
 import './Footer.css';
 
 const Footer = () => {
-  const [showResumeModal, setShowResumeModal] = useState(false);
   const currentYear = new Date().getFullYear();
-
-  const handleResumeClick = (e) => {
-    e.preventDefault();
-    setShowResumeModal(true);
-  };
-
-  const handleDownload = () => {
-    // Create a link element and trigger download
-    const link = document.createElement('a');
-    link.href = personalInfo.resume;
-    link.download = 'Rohith_Krishnamurthy_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <>
@@ -54,9 +38,9 @@ const Footer = () => {
                 <a href="#skills" className="footer-link">Skills</a>
                 <a href="#projects" className="footer-link">Projects</a>
                 <a href="#experience" className="footer-link">Experience</a>
-                <button onClick={handleResumeClick} className="footer-link resume-btn">
+                <a href={personalInfo.resume} target="_blank" rel="noopener noreferrer" className="footer-link">
                   Resume
-                </button>
+                </a>
               </nav>
             </div>
 
@@ -87,12 +71,18 @@ const Footer = () => {
                 </a>
               </div>
               <div className="footer-cta">
-                <button onClick={handleResumeClick} className="btn-view-resume">
+                <a href={personalInfo.resume} target="_blank" rel="noopener noreferrer" className="btn-view-resume">
                   <svg viewBox="0 0 24 24" width="20" height="20">
-                    <path fill="currentColor" d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M10,19L12,15H9V10H15V15L13,19H10Z" />
+                    <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
                   </svg>
                   View Resume
-                </button>
+                </a>
+                <a href={personalInfo.resume} download className="btn-download-resume-footer">
+                  <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                  </svg>
+                  Download PDF
+                </a>
               </div>
             </div>
           </div>
@@ -107,48 +97,6 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-
-      {/* Resume Modal */}
-      {showResumeModal && (
-        <div className="resume-modal-overlay" onClick={() => setShowResumeModal(false)}>
-          <div className="resume-modal" onClick={(e) => e.stopPropagation()}>
-            <div className="resume-modal-header">
-              <h3>Resume - {personalInfo.name}</h3>
-              <button 
-                className="modal-close-btn" 
-                onClick={() => setShowResumeModal(false)}
-              >
-                ×
-              </button>
-            </div>
-            <div className="resume-modal-body">
-              <iframe 
-                src={personalInfo.resume} 
-                title="Resume Preview"
-                width="100%" 
-                height="600px"
-              />
-            </div>
-            <div className="resume-modal-footer">
-              <button 
-                className="btn-download-resume" 
-                onClick={handleDownload}
-              >
-                <svg viewBox="0 0 24 24" width="20" height="20">
-                  <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
-                </svg>
-                Download PDF
-              </button>
-              <button 
-                className="btn-close-modal" 
-                onClick={() => setShowResumeModal(false)}
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 };

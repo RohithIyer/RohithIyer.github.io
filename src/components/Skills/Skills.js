@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { skillsData, getSkillCategories } from '../../data/skillsData';
 import './Skills.css';
 
@@ -63,9 +63,9 @@ const Skills = () => {
               <div key={index} className="skill-card">
                 <div className="skill-header">
                   {skill.icon && (
-                    <img 
-                      src={skill.icon} 
-                      alt={`${skill.name} logo`} 
+                    <img
+                      src={skill.icon}
+                      alt={`${skill.name} logo`}
                       className="skill-icon"
                       onError={handleImageError}
                       data-variation-index="0"
@@ -73,43 +73,8 @@ const Skills = () => {
                   )}
                   <h4 className="skill-name">{skill.name}</h4>
                 </div>
-                <div className="skill-progress">
-                  <div className="progress-bar">
-                    <div 
-                      className="progress-fill" 
-                      style={{ width: `${skill.level}%` }}
-                      data-level={`${skill.level}%`}
-                    ></div>
-                  </div>
-                </div>
               </div>
             ))}
-          </div>
-
-          <div className="skills-visualization">
-            <div className="radar-chart">
-              {/* You can add a radar chart visualization here using a library like Chart.js or D3.js */}
-              <div className="chart-placeholder">
-                <h3>Skill Proficiency Overview</h3>
-                <div className="skill-bars">
-                  {skillsData[selectedCategory].map((skill, index) => (
-                    <div key={index} className="skill-bar-item">
-                      <span className="skill-label">{skill.name}</span>
-                      <div className="horizontal-bar">
-                        <div 
-                          className="bar-fill" 
-                          style={{ 
-                            width: `${skill.level}%`,
-                            animationDelay: `${index * 0.1}s`
-                          }}
-                        ></div>
-                      </div>
-                      <span className="skill-percentage">{skill.level}%</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 

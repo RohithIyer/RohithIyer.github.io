@@ -1,10 +1,10 @@
-// src/data/portfolioData.js
+﻿// src/data/portfolioData.js
 
 export const personalInfo = {
   name: "Rohith Krishnamurthy",
   title: "Data Analytics Professional",
   email: "krishnamurthy.ro@northeastern.edu",
-  phone: "+1 (617) 755 2053",
+  phone: "+1 (123) 456-7890",
   location: "New York, NY",
   linkedin: "https://www.linkedin.com/in/rohkrish5915",
   github: "https://github.com/RohithIyer",
@@ -15,141 +15,120 @@ export const personalInfo = {
 export const heroImages = [
   "/images/banner1.jpg",
   "/images/banner2.jpg",
-  "/images/banner3.jpg",
-  "/images/banner4.jpg"
+  "/images/dashboard_header.jpg",
+  "/images/financial-default-by-purpose.jpg"
 ];
 
-export const aboutMe = `Hi, I’m Rohith Krishnamurthy — a data professional with a strong foundation in analytics, engineering, and business impact.
+export const aboutMe = `I build data systems that answer real business questions.
 
-I recently completed my Master’s in Analytics from Northeastern University with a perfect 4.0 GPA. I’m currently working as a Data Engineer Intern at Vester, where I lead the development and quality assurance of robust data pipelines and evaluation frameworks for multiple AI models.
+Over 4+ years in consulting and analytics, I've worked on forecasting, risk modeling, ETL pipelines, and dashboards used by leadership teams to make actual decisions, not vanity charts.
 
-Before this, I spent 4+ years at Capgemini, where I advanced from Data Analyst to Senior Data Analyst, translating complex business requirements into data-driven solutions across finance, operations, and product domains.
+**What I've done:**
+• Delivered $8M+ in cost savings through process optimization and system decommissioning
+• Built forecasting and risk models (up to 90% accuracy) used for financial planning
+• Designed SQL + Python pipelines that cut data processing time by ~40%
+• Turned messy, fragmented data into analysis-ready datasets for ML and reporting
 
-Here are a few highlights from my journey:
-	•	📈 Improved forecasting accuracy by 90% through ML-powered predictive models
-	•	📊 Enhanced data accessibility by 15% via interactive dashboards
-	•	⚙️ Reduced data processing time by 40% by optimizing ETL workflows
+**What I work with:**
+SQL, Python (pandas, scikit-learn), Tableau, ETL pipelines, ML models, cloud deployments
 
-My technical toolkit includes SQL, Python, Tableau, Power BI, TensorFlow, and cloud platforms (AWS, Azure). What sets me apart is my ability to bridge technical execution with real business value.
+**What I'm looking for:**
+Roles where data is used to drive decisions, not just populate dashboards.
 
-As a graduate student, I not only deepened my expertise in machine learning and advanced analytics, but also balanced academics with part-time work as a Campus Security Proctor — strengthening my time management and communication skills.
-
-I actively engage in the tech community through events like Techstars Startup Weekend, and I recently completed a capstone project building a cryptocurrency investment assistant that combines deep learning, real-time data pipelines, and natural language interfaces for market analysis.
-
-I’m now looking for full-time roles in predictive analytics, data strategy, or AI-driven decision systems, where I can help organizations turn data into measurable outcomes.
-
-Let’s connect and build something impactful.`;
+If you're hiring for data, analytics, or applied ML roles and care about impact over buzzwords, let's talk.`;
 
 export const education = [
   {
-    degree: "Master of Professional Studies in Analytics",
+    degree: "MPS in Analytics (Applied Machine Intelligence)",
     specialization: "Applied Machine Intelligence",
     school: "Northeastern University",
     location: "Boston, MA",
-    duration: "2023 - 2025",
+    duration: "Sep 2023 - Mar 2025",
     gpa: "4.0/4.0",
     coursework: [
-      "Machine Learning",
-      "Deep Learning",
-      "Data Mining",
-      "Statistical Analysis",
-      "Big Data Analytics"
+      "AI Applications",
+      "AI Ethics",
+      "Probability and Statistics",
+      "Principle of Data Visualization and Business Intelligence"
     ],
     achievements: [
       "4.0 GPA",
-      "Campus Security Proctor",
-      "TechStars Startup Weekend Participant"
+      "Capstone: AI-Powered Cryptocurrency Investment Assistant"
     ]
   },
   {
     degree: "PG Diploma in Data Science",
     specialization: "Data Science",
-    school: "International Institute of Information Technology, Bangalore",
+    school: "IIIT Bangalore",
     location: "Bangalore, India",
-    duration: "2018 - 2019",
+    duration: "Sep 2018 - Sep 2019",
     gpa: "3.4/4.0",
     coursework: [
-      "Data Visualization",
-      "Predictive Analytics I",
-      "Predictive analytics II",
-      "Statistical Analysis",
-      "Big Data Analytics"
-    ]
+      "Predictive Analytics I and II",
+      "SQL & Data Warehousing",
+      "Big Data Analytics",
+      "Data Engineering Pipelines"
+    ],
+    achievements: []
   },
   {
-    degree: "Bachelor of Engineering",
-    specialization: "Computer Science and Engineering",
-    school: "Anna University",
-    location: "Chennai, India",
+    degree: "B.E. in Computer Science",
+    specialization: "Computer Science",
+    school: "Sri Ramakrishna Institute of Technology",
+    location: "Tamil Nadu, India",
     duration: "2014 - 2018",
-    gpa: "3.8/4.0",
+    gpa: "3.2/4.0",
     coursework: [
-      "Data Structures & Algorithms",
-      "Database Management Systems",
-      "Software Engineering",
+      "Data Structures",
       "Operating Systems",
-      "Computer Networks"
+      "Object-Oriented Programming",
+      "Database Systems"
     ],
-    achievements: [
-      "Dean's List",
-      "Technical Club Member"
-    ]
+    achievements: []
   }
 ];
 
 export const experience = [
   {
-    position: "Data Engineer Intern",
-    company: "Vester AI",
+    position: "Software Development & Data Analytics Intern",
+    company: "Vester",
     location: "Remote, USA",
-    duration: "2025 - Present",
+    duration: "Jul 2025 - Present",
     type: "Part-time",
-    description: "Led QA, data engineering, and analytics efforts for a crypto-focused AI platform, supporting multi-agent systems for real-time decision making.",
-    Responsibilities: [
-      "Built Python + Streamlit dashboards for blockchain adoption metrics, improving KPI visibility for leadership by 25%.",
-      "Converted fragmented blockchain data into clean, analysis-ready datasets using Web3 APIs, ETL scripts, and SQL, reducing prep time by 40%.",
-      "Designed automated SQL pipelines (Airflow + dbt) to feed live dashboards, cutting latency of insights from days to hours.",
-      "Participated in explainable AI testing and reasoning traceability for ML models, contributing to improved user trust in crypto advisory tools."
+    description: "Working on end-to-end crypto analytics infrastructure, spanning data engineering, AI systems, and analytics dashboards.",
+    responsibilities: [
+      "Scaled token coverage from 20+ to 110+ assets, integrating on-chain, market, and sentiment data into PostgreSQL pipelines.",
+      "Redesigned ETL architecture to use parallel Cloud Run workers for scalable, fault-isolated execution.",
+      "Built automated data quality audits across dozens of metrics, enabling high-trust dashboards.",
+      "Developed Streamlit dashboards and LLM-based tools to operationalize blockchain data for business teams.",
+      "Contributed to multi-agent LLM pipelines, hallucination detection, and output validation workflows."
     ],
-    technologies: ["Python", "SQL", "Airflow", "dbt", "Streamlit", "PostgreSQL", "MongoDB", "Web3 APIs", "LangChain", "GPT-4", "GCP"]
-  },
-    {
-    position: "Chief of Operations and Data Strategy",
-    company: "Boston New Technology",
-    location: "Remote, USA",
-    duration: "2023 - 2024",
-    type: "Part-time",
-    description: "Oversaw operations and analytics for 10+ tech events, applying data strategy to drive event growth, sponsor ROI, and audience engagement.",
-    Responsibilities: [
-      "Built 10+ Tableau dashboards tracking registrations, attendance, and sponsor ROI, boosting event participation by 20%.",
-      "Analyzed engagement from 5,000+ participants using Python + SQL (survey/A-B testing) to optimize event format and speaker lineups.",
-      "Automated reporting workflows with Python scripts, reducing manual reporting effort by 35% and improving error detection.",
-      "Designed Excel-based resource allocation model, saving $50K annually while improving sponsor package planning."
-    ],
-    technologies: ["Python", "SQL", "Tableau", "Excel", "A/B Testing", "Event Analytics"]
+    technologies: ["Python", "SQL", "PostgreSQL", "Airflow", "Streamlit", "GCP", "LangGraph", "Gemini", "OpenAI"]
   },
   {
-    position: "Associate Consultant/Senior Data Analyst",
+    position: "Senior Data Analyst",
     company: "Capgemini",
     location: "India",
     duration: "2021 - 2022",
     type: "Full-time",
     description: "Led data initiatives for banking and finance clients, specializing in predictive analytics and business intelligence.",
-    Responsibilities: [
-      "Automated SQL + Python report generation workflows, saving 15 analyst hours weekly",
-      "Built fraud detection models using logistic regression + anomaly detection, achieving 90% accuracy and reducing fraud detection time by 60%",
-      "Partnered with cross-functional teams to deploy models into near real-time monitoring, reducing false positives by 15%"
+    responsibilities: [
+      "Developed predictive models that improved forecasting accuracy by 90%",
+      "Created interactive dashboards that enhanced data accessibility by 15%",
+      "Optimized data pipelines reducing processing time by 40%",
+      "Led cross-functional teams to deliver data-driven solutions",
+      "Mentored junior analysts on best practices in data analytics"
     ],
     technologies: ["Python", "SQL", "Tableau", "Power BI", "AWS", "Machine Learning"]
   },
   {
-    position: "Senior Software Engineer/Data Analyst",
+    position: "Data Analyst",
     company: "Capgemini",
     location: "India",
-    duration: "2020 - 2021",
+    duration: "2019 - 2021",
     type: "Full-time",
     description: "Transformed business requirements into actionable insights for finance and operations teams.",
-    Responsibilities: [
+    responsibilities: [
       "Built automated reporting systems saving 20 hours per week",
       "Developed SQL pipelines for ETL processes",
       "Created data visualization dashboards for C-level executives",
@@ -159,18 +138,17 @@ export const experience = [
     technologies: ["SQL", "Python", "Tableau", "Excel", "ETL", "Data Warehousing"]
   },
   {
-    position: "Software Engineer/Data Analyst",
+    position: "Software Engineer",
     company: "Capgemini",
     location: "India", 
-    duration: "2019 - 2020",
+    duration: "2018 - 2019",
     type: "Full-time",
     description: "Started career focusing on software development and data engineering.",
-    Responsibilities: [
-      "Built a real-time financial risk system analyzing 200K+ daily transactions, improving risk prediction by 30% and enabling near real-time reporting",
-      "Integrated financial data across 5 enterprise systems in AWS + Snowflake, cutting latency by 35%",
-      "Tuned SQL queries on terabyte-scale DBs, reducing runtime by 40% and report generation time by 65%",
-      "Developed forecasting models predicting customer churn/behavior with 85% accuracy, informing retention campaigns",
-      "Standardized KPI definitions across 3 departments, ensuring data governance and consistent reporting"
+    responsibilities: [
+      "Developed data processing applications using Python",
+      "Implemented database solutions for client applications",
+      "Participated in full software development lifecycle",
+      "Wrote technical documentation for data processes"
     ],
     technologies: ["Python", "Java", "SQL", "Git", "Agile"]
   }
@@ -245,7 +223,7 @@ export const projects = [
     category: "Machine Learning",
     description: "A comprehensive system for analyzing taxi service data, predicting demand patterns, and optimizing resource allocation to improve operational efficiency.",
     longDescription: `This project leverages NYC TLC Trip data to demonstrate data-driven approaches to taxi service optimization through data analysis, predictive modeling, and automated monitoring.
-    
+
     Key Accomplishments:
     • Developed predictive models forecasting trip demand and revenue with 90% accuracy
     • Created automated systems for monitoring KPIs and alerting stakeholders
@@ -275,7 +253,7 @@ export const projects = [
     category: "AI/Automation",
     description: "An intelligent SQL query generator that uses AI to transform natural language questions into SQL queries.",
     longDescription: `An intelligent SQL query generator that transforms natural language questions into optimized SQL queries using OpenAI GPT models.
-    
+
     Features:
     • Natural language to SQL conversion
     • Support for multiple data sources (CSV, Excel, JSON, URLs)
@@ -298,7 +276,7 @@ export const projects = [
       "Keyboard shortcuts"
     ],
     liveUrl: "",
-    githubUrl: "https://github.com/RohithIyer/AI-SQL-BI-Agent",
+    githubUrl: "https://github.com/RohithIyer/ai-sql-bi-agent",
     date: "2024"
   },
   {
@@ -307,7 +285,7 @@ export const projects = [
     category: "Gaming Analytics",
     description: "A comprehensive analytics platform for Call of Duty game data, featuring player analytics, revenue optimization, fraud detection, and real-time monitoring.",
     longDescription: `A comprehensive analytics platform analyzing Call of Duty game data to provide insights on player behavior, revenue optimization, and fraud detection.
-    
+
     Features:
     • Comprehensive player behavior analysis and segmentation
     • Transaction analysis and monetization insights
@@ -329,7 +307,7 @@ export const projects = [
       "REST API backend"
     ],
     liveUrl: "",
-    githubUrl: "https://github.com/RohithIyer/call-of-duty-analytics",
+    githubUrl: "https://github.com/RohithIyer/cod-analytics-platform",
     date: "2023"
   },
   {
@@ -338,7 +316,7 @@ export const projects = [
     category: "Finance/ML",
     description: "Machine learning model to predict loan default risk with 92% accuracy using XGBoost and LSTM.",
     longDescription: `Developed a sophisticated financial risk model that predicts loan default probability using advanced machine learning techniques.
-    
+
     Achievements:
     • 92% prediction accuracy using ensemble methods
     • Feature engineering from 50+ financial indicators
@@ -360,7 +338,7 @@ export const projects = [
       "Model performance monitoring"
     ],
     liveUrl: "",
-    githubUrl: "https://github.com/RohithIyer/financial-risk-model",
+    githubUrl: "https://github.com/RohithIyer/loan-prediction-nlp-app",
     date: "2024"
   },
   {
@@ -369,7 +347,7 @@ export const projects = [
     category: "Data Visualization",
     description: "Comprehensive analysis of Airbnb pricing and availability trends in Austin using SQL and Tableau.",
     longDescription: `Analyzed Airbnb market data for Austin to identify pricing patterns, seasonal trends, and investment opportunities.
-    
+
     Key Insights:
     • Identified optimal pricing strategies by neighborhood
     • Seasonal demand patterns and price fluctuations
