@@ -46,14 +46,14 @@ export const education = [
     duration: "Sep 2023 - Mar 2025",
     gpa: "4.0/4.0",
     coursework: [
-      "AI Applications",
-      "AI Ethics",
-      "Probability and Statistics",
-      "Principle of Data Visualization and Business Intelligence"
+      "Advanced Statistics",
+      "Machine Learning",
+      "Predictive Modeling",
+      "Business Intelligence"
     ],
     achievements: [
       "4.0 GPA",
-      "Capstone: AI-Powered Cryptocurrency Investment Assistant"
+      "Capstone: AI-Powered Cryptocurrency Investment Assistant using deep learning + NLP"
     ]
   },
   {
@@ -64,10 +64,12 @@ export const education = [
     duration: "Sep 2018 - Sep 2019",
     gpa: "3.4/4.0",
     coursework: [
-      "Predictive Analytics I and II",
-      "SQL & Data Warehousing",
-      "Big Data Analytics",
-      "Data Engineering Pipelines"
+      "Python Programming",
+      "MySQL & Database Management",
+      "Deep Learning",
+      "Data Models",
+      "Version Control",
+      "Business Analysis"
     ],
     achievements: []
   },
