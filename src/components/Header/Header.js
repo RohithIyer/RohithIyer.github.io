@@ -25,7 +25,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <a href="/">Rohith</a>
+          <a href="/">Rohith • Data & AI</a>
         </div>
         <button
           className="theme-toggle"

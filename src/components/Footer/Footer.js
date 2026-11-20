@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="footer-section">
               <h3 className="footer-title">Get In Touch</h3>
               <p className="footer-description">
-                I'm always open to discussing new opportunities in predictive analytics and data strategy.
+                Always open to discussing data engineering, cloud data platforms, and applied AI systems.
               </p>
               <div className="contact-info">
                 <a href={`mailto:${personalInfo.email}`} className="contact-item">
@@ -36,8 +36,9 @@ const Footer = () => {
               <nav className="footer-nav">
                 <a href="#about" className="footer-link">About</a>
                 <a href="#skills" className="footer-link">Skills</a>
+                <a href="#experience" className="footer-link">Work Focus</a>
                 <a href="#projects" className="footer-link">Projects</a>
-                <a href="#experience" className="footer-link">Experience</a>
+                <a href="#education" className="footer-link">Credentials</a>
                 <a href={personalInfo.resume} target="_blank" rel="noopener noreferrer" className="footer-link">
                   Resume
                 </a>

@@ -1,166 +1,92 @@
 /* Education.css */
 
 .education {
-  background-color: white;
+  background-color: var(--background-color);
 }
 
-.education-timeline {
-  max-width: 800px;
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
   margin: 0 auto;
-  position: relative;
 }
 
-.education-timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
-  background-color: var(--border-color);
-}
-
-.education-item {
+.credential-card {
   display: flex;
-  align-items: center;
-  margin-bottom: 50px;
-  position: relative;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: var(--section-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
 }
 
-.education-item:last-child {
-  margin-bottom: 0;
+.credential-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
 }
 
-.education-icon {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 50%;
+.credential-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: rgba(37, 99, 235, 0.12);
+  color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  z-index: 2;
-  box-shadow: var(--shadow-md);
+  font-size: 1.25rem;
 }
 
-.education-content {
-  background-color: var(--section-bg);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: var(--shadow-md);
-  width: calc(50% - 40px);
-  position: relative;
+.credential-icon.cert-icon {
+  background-color: rgba(16, 185, 129, 0.14);
+  color: var(--success-color);
 }
 
-.education-item:nth-child(odd) .education-content {
-  margin-right: auto;
-  margin-left: 0;
+.credential-body {
+  min-width: 0;
 }
 
-.education-item:nth-child(even) .education-content {
-  margin-left: auto;
-  margin-right: 0;
+.credential-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--success-color);
+  margin-bottom: 4px;
 }
 
 .degree {
-  font-size: 1.3rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--heading-color);
-  margin-bottom: 8px;
+  margin: 0 0 6px 0;
+  line-height: 1.35;
 }
 
 .institution {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--primary-color);
-  margin-bottom: 10px;
+  margin: 0 0 8px 0;
 }
 
 .education-meta {
   display: flex;
-  gap: 20px;
+  gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 15px;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--text-light);
 }
 
-.gpa-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: var(--success-color);
-  color: white;
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-}
-
-.trophy-icon {
-  font-size: 1rem;
-}
-
-.achievements {
-  list-style: none;
-  padding: 0;
-}
-
-.achievements li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 8px;
-  color: var(--text-color);
-}
-
-.achievements li::before {
-  content: '•';
-  position: absolute;
-  left: 8px;
-  color: var(--primary-color);
-  font-weight: bold;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .education-timeline::before {
-    left: 30px;
-  }
-  
-  .education-icon {
-    left: 30px;
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-  
-  .education-content {
-    width: calc(100% - 80px);
-    margin-left: 80px !important;
-    margin-right: 0 !important;
-  }
-  
-  .degree {
-    font-size: 1.1rem;
-  }
-  
-  .institution {
-    font-size: 1rem;
-  }
-}
-
 @media (max-width: 480px) {
-  .education-content {
-    padding: 20px;
-  }
-  
-  .education-meta {
-    font-size: 0.85rem;
+  .credential-card {
+    padding: 18px;
   }
 }

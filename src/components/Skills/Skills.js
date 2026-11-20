@@ -1,39 +1,31 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { skillsData, getSkillCategories } from '../../data/skillsData';
 import './Skills.css';
 
 const Skills = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Core Tools");
   const categories = getSkillCategories();
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
   const handleImageError = (e) => {
     const img = e.target;
     const originalSrc = img.getAttribute('data-original-src') || img.src;
-    
-    // Try different cases and extensions
+
     const variations = [
       originalSrc,
-      originalSrc.replace('.jpg', '.JPG'),
-      originalSrc.replace('.JPG', '.jpg'),
-      originalSrc.replace('.png', '.PNG'),
       originalSrc.replace('.PNG', '.png'),
-      originalSrc.replace('.jpeg', '.JPEG'),
-      originalSrc.replace('.JPEG', '.jpeg'),
-      originalSrc.replace('.svg', '.SVG'),
-      originalSrc.replace('.SVG', '.svg')
+      originalSrc.replace('.png', '.PNG'),
+      originalSrc.replace('.jpg', '.JPG'),
+      originalSrc.replace('.JPG', '.jpg')
     ];
-    
-    const currentIndex = parseInt(img.getAttribute('data-variation-index') || '0');
-    
+
+    const currentIndex = parseInt(img.getAttribute('data-variation-index') || '0', 10);
+
     if (currentIndex < variations.length - 1) {
-      img.setAttribute('data-variation-index', currentIndex + 1);
+      img.setAttribute('data-variation-index', String(currentIndex + 1));
       img.setAttribute('data-original-src', originalSrc);
       img.src = variations[currentIndex + 1];
     } else {
-      // If all variations fail, use a placeholder or hide the image
       img.style.display = 'none';
-      // Or use a default tech icon
-      // img.src = '/images/logos/default-tech.png';
     }
   };
 
@@ -42,7 +34,7 @@ const Skills = () => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Skills & Technologies</h2>
-          <p className="section-subtitle">Technologies I work with</p>
+          <p className="section-subtitle">Tools and platforms I use to build production data & AI systems</p>
         </div>
 
         <div className="skills-tabs">
@@ -60,9 +52,9 @@ const Skills = () => {
         <div className="skills-content">
           <div className="skills-grid">
             {skillsData[selectedCategory].map((skill, index) => (
-              <div key={index} className="skill-card">
+              <div key={`${selectedCategory}-${index}`} className="skill-card">
                 <div className="skill-header">
-                  {skill.icon && (
+                  {skill.icon ? (
                     <img
                       src={skill.icon}
                       alt={`${skill.name} logo`}
@@ -70,6 +62,10 @@ const Skills = () => {
                       onError={handleImageError}
                       data-variation-index="0"
                     />
+                  ) : (
+                    <div className="skill-badge" aria-hidden="true">
+                      {skill.badge || skill.name.slice(0, 2).toUpperCase()}
+                    </div>
                   )}
                   <h4 className="skill-name">{skill.name}</h4>
                 </div>
@@ -80,7 +76,7 @@ const Skills = () => {
 
         <div className="skills-footer">
           <p className="skills-note">
-            Always learning and expanding my skill set. Currently exploring Cloud Computing and DevOps practices.
+            Focused on reliable cloud data pipelines, serverless orchestration, and evaluated AI systems.
           </p>
         </div>
       </div>

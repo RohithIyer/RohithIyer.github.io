@@ -1,7 +1,7 @@
 /* About.css */
 
 .about {
-  background-color: white;
+  background-color: var(--background-color);
 }
 
 .about-content {
