@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { projectsData, getCategories } from '../../data/portfolioData';
+import { projectsData } from '../../data/portfolioData';
 import './Projects.css';
 
 const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredProject, setHoveredProject] = useState(null);
   const navigate = useNavigate();
-
-  const categories = getCategories();
-  const filteredProjects = selectedCategory === 'All'
-    ? projectsData
-    : projectsData.filter((project) => project.category === selectedCategory);
 
   const handleImageError = (e) => {
     const img = e.target;
@@ -48,20 +42,8 @@ const Projects = () => {
           <p className="section-subtitle">Deep dives into AI agents, forecasting pipelines, and analytics platforms</p>
         </div>
 
-        <div className="project-filters">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`filter-btn ${selectedCategory === category ? 'active' : ''}`}
-              onClick={() => setSelectedCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
         <div className="projects-grid">
-          {filteredProjects.map((project) => (
+          {projectsData.map((project) => (
             <article
               key={project.id}
               className="project-card"

@@ -6,22 +6,22 @@ export const personalInfo = {
   email: "rsr.kvk@gmail.com",
   phone: "+1 617 755 2053",
   location: "Seattle, WA",
-  linkedin: "https://www.linkedin.com/in/rohith-krishnamurthy5915",
+  linkedin: "https://www.linkedin.com/in/rohkrish5915/",
   github: "https://github.com/RohithIyer",
   resume: "/resume/Rohith_Krishnamurthy_Resume.pdf",
   profileImage: "/images/profile.jpg"
 };
 
 export const heroImages = [
-  "/images/banner1.jpg",
-  "/images/banner2.jpg",
-  "/images/dashboard_header.JPG",
-  "/images/financial-default-by-purpose.jpg"
+  "/images/IMG_9820.jpg",
+  "/images/PXL_20231217_183716220.jpg",
+  "/images/50403844_00201_0523_XLarge~2.jpg",
+  "/images/50403844_00301_0532_Medium.jpg"
 ];
 
 export const aboutMe = `I design end-to-end data platforms and AI systems that hold up in production.
 
-Over 4+ years across consulting, fintech, and AI startups, my work has centered on the layer between raw data and real decisions—turning fragmented APIs, warehouses, and LLM prototypes into dependable pipelines, governed evaluation loops, and decision-ready analytics.
+Over 6+ years across consulting, fintech, and AI startups, my work has centered on the layer between raw data and real decisions—turning fragmented APIs, warehouses, and LLM prototypes into dependable pipelines, governed evaluation loops, and decision-ready analytics.
 
 **How I approach data engineering:**
 • Treat data quality, schema checks, and environment parity as first-class engineering requirements, not afterthoughts
@@ -88,21 +88,21 @@ export const education = [
     degree: "Master of Professional Studies: Analytics",
     school: "Northeastern University",
     location: "Boston, MA",
-    duration: "Applied Machine Intelligence"
+    duration: "Sep 2023 - Mar 2025"
   },
   {
     id: 2,
     degree: "Post Graduate Diploma in Data Science",
     school: "IIIT Bangalore & upGrad",
     location: "Bengaluru, IN",
-    duration: "Aug 2018 - May 2019"
+    duration: "Sep 2018 - May 2019"
   },
   {
     id: 3,
     degree: "B.S. in Computer Science",
     school: "Anna University",
-    location: "Chennai, IN",
-    duration: "Aug 2014 - May 2018"
+    location: "Coimbatore, IN",
+    duration: "Aug 2014 - Apr 2018"
   }
 ];
 

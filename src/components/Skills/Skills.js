@@ -1,33 +1,10 @@
 import React, { useState } from 'react';
-import { skillsData, getSkillCategories } from '../../data/skillsData';
+import { skillsData, skillCategoryNotes, getSkillCategories } from '../../data/skillsData';
 import './Skills.css';
 
 const Skills = () => {
   const categories = getSkillCategories();
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-
-  const handleImageError = (e) => {
-    const img = e.target;
-    const originalSrc = img.getAttribute('data-original-src') || img.src;
-
-    const variations = [
-      originalSrc,
-      originalSrc.replace('.PNG', '.png'),
-      originalSrc.replace('.png', '.PNG'),
-      originalSrc.replace('.jpg', '.JPG'),
-      originalSrc.replace('.JPG', '.jpg')
-    ];
-
-    const currentIndex = parseInt(img.getAttribute('data-variation-index') || '0', 10);
-
-    if (currentIndex < variations.length - 1) {
-      img.setAttribute('data-variation-index', String(currentIndex + 1));
-      img.setAttribute('data-original-src', originalSrc);
-      img.src = variations[currentIndex + 1];
-    } else {
-      img.style.display = 'none';
-    }
-  };
 
   return (
     <section className="skills" id="skills">
@@ -54,19 +31,11 @@ const Skills = () => {
             {skillsData[selectedCategory].map((skill, index) => (
               <div key={`${selectedCategory}-${index}`} className="skill-card">
                 <div className="skill-header">
-                  {skill.icon ? (
-                    <img
-                      src={skill.icon}
-                      alt={`${skill.name} logo`}
-                      className="skill-icon"
-                      onError={handleImageError}
-                      data-variation-index="0"
-                    />
-                  ) : (
-                    <div className="skill-badge" aria-hidden="true">
-                      {skill.badge || skill.name.slice(0, 2).toUpperCase()}
-                    </div>
-                  )}
+                  <img
+                    src={skill.icon}
+                    alt={`${skill.name} logo`}
+                    className="skill-icon"
+                  />
                   <h4 className="skill-name">{skill.name}</h4>
                 </div>
               </div>
@@ -76,7 +45,7 @@ const Skills = () => {
 
         <div className="skills-footer">
           <p className="skills-note">
-            Focused on reliable cloud data pipelines, serverless orchestration, and evaluated AI systems.
+            {skillCategoryNotes[selectedCategory]}
           </p>
         </div>
       </div>

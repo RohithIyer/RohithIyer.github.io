@@ -68,15 +68,9 @@
   background-color: var(--background-color);
   border-radius: 15px;
   box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-  cursor: pointer;
-  border: 2px solid var(--border-color);
-}
-
-.skill-card:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-5px);
-  border-color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  cursor: default;
+  user-select: none;
 }
 
 .skill-header {

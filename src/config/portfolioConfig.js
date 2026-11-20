@@ -18,7 +18,7 @@ export const portfolioConfig = {
   // Social Links
   social: {
     github: "https://github.com/RohithIyer",
-    linkedin: "https://www.linkedin.com/in/rohith-krishnamurthy5915",
+    linkedin: "https://www.linkedin.com/in/rohkrish5915/",
     portfolio: "https://rohithiyer.github.io"
   },
 
