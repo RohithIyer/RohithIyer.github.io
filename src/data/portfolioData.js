@@ -2,344 +2,264 @@
 
 export const personalInfo = {
   name: "Rohith Krishnamurthy",
-  title: "Data Analytics Professional",
-  email: "krishnamurthy.ro@northeastern.edu",
-  phone: "+1 (123) 456-7890",
-  location: "Boston, MA",
-  linkedin: "https://www.linkedin.com/in/rohkrish5915",
+  title: "Data Engineer & AI Systems Builder",
+  email: "rsr.kvk@gmail.com",
+  phone: "+1 617 755 2053",
+  location: "Seattle, WA",
+  linkedin: "https://www.linkedin.com/in/rohkrish5915/",
   github: "https://github.com/RohithIyer",
   resume: "/resume/Rohith_Krishnamurthy_Resume.pdf",
   profileImage: "/images/profile.jpg"
 };
 
 export const heroImages = [
-  "/images/banner1.jpg",
-  "/images/banner2.jpg",
-  "/images/dashboard_header.jpg",
-  "/images/financial-default-by-purpose.jpg"
+  "/images/IMG_9820.jpg",
+  "/images/PXL_20231217_183716220.jpg",
+  "/images/50403844_00201_0523_XLarge~2.jpg",
+  "/images/50403844_00301_0532_Medium.jpg"
 ];
 
-export const aboutMe = `Hi, I'm Rohith Krishnamurthy. I recently completed my Master's in Analytics from Northeastern with a 4.0 GPA. This builds on my 4+ years in data analytics at Capgemini.
+export const aboutMe = `I design end-to-end data platforms and AI systems that hold up in production.
 
-At Capgemini, I progressed from Software Engineer to Senior Data Analyst. I specialized in transforming business requirements into actionable insights.
+Over 6+ years across consulting, fintech, and AI startups, my work has centered on the layer between raw data and real decisions—turning fragmented APIs, warehouses, and LLM prototypes into dependable pipelines, governed evaluation loops, and decision-ready analytics.
 
-Let me share some key achievements. I developed predictive models that improved forecasting accuracy by 90%. I created dashboards that enhanced data accessibility by 15%. I optimized data pipelines that reduced processing time by 40%.
+**How I approach data engineering:**
+• Treat data quality, schema checks, and environment parity as first-class engineering requirements, not afterthoughts
+• Build modular, serverless, and cloud-native pipelines that scale cleanly without manual babysitting
+• Pair generative AI and multi-agent workflows with structured evaluation (LLM-as-Judge, governance checks) so outputs are trustworthy
 
-My technical toolkit includes SQL, Python, Tableau, and machine learning. What sets me apart is my ability to connect technical work with business outcomes.
-
-My Master's program expanded my expertise in advanced analytics. Studying in a new country enhanced my adaptability and communication skills. I balanced academics with working as a campus security proctor.
-
-I also participated in professional events like TechStars Startup Weekend. This helped me build my network in the analytics community.
-
-For my capstone project, I developed a cryptocurrency investment assistant. This used deep learning to analyze market trends and provide actionable insights.
-
-I'm now seeking opportunities in predictive analytics and data strategy. I want to help organizations leverage their data more effectively.`;
-
-export const education = [
-  {
-    degree: "Master of Professional Studies in Analytics",
-    specialization: "Applied Machine Intelligence",
-    school: "Northeastern University",
-    location: "Boston, MA",
-    duration: "2023 - 2025",
-    gpa: "4.0/4.0",
-    coursework: [
-      "Machine Learning",
-      "Deep Learning",
-      "Data Mining",
-      "Statistical Analysis",
-      "Big Data Analytics"
-    ],
-    achievements: [
-      "4.0 GPA",
-      "Campus Security Proctor",
-      "TechStars Startup Weekend Participant"
-    ]
-  },
-  {
-    degree: "Bachelor of Engineering",
-    specialization: "Computer Science and Engineering",
-    school: "Anna University",
-    location: "Chennai, India",
-    duration: "2014 - 2018",
-    gpa: "3.8/4.0",
-    coursework: [
-      "Data Structures & Algorithms",
-      "Database Management Systems",
-      "Software Engineering",
-      "Operating Systems",
-      "Computer Networks"
-    ],
-    achievements: [
-      "Dean's List",
-      "Technical Club Member"
-    ]
-  }
-];
+**What you'll find here:**
+Instead of repeating my resume line-by-line, this portfolio highlights the system architectures I work on, the engineering patterns behind my roles, and deep-dive project case studies. If you want the formal timeline, you can view or download my resume below.`;
 
 export const experience = [
   {
-    position: "Senior Data Analyst",
-    company: "Capgemini",
-    location: "India",
-    duration: "2021 - 2022",
-    type: "Full-time",
-    description: "Led data initiatives for banking and finance clients, specializing in predictive analytics and business intelligence.",
-    responsibilities: [
-      "Developed predictive models that improved forecasting accuracy by 90%",
-      "Created interactive dashboards that enhanced data accessibility by 15%",
-      "Optimized data pipelines reducing processing time by 40%",
-      "Led cross-functional teams to deliver data-driven solutions",
-      "Mentored junior analysts on best practices in data analytics"
+    id: 1,
+    position: "Data Engineer Trainee",
+    company: "Neoware AI",
+    location: "Remote, USA",
+    duration: "Apr 2026 - Present",
+    theme: "Serverless Reporting & ML Governance",
+    focus: "Architecting event-driven reporting pipelines and release guardrails that connect Databricks SQL, serverless AWS workflows, and embedded business intelligence.",
+    systemsBuilt: [
+      "Serverless transformation & scheduling orchestration across AWS Lambda, TypeScript, DynamoDB, and Databricks SQL",
+      "Unified data refresh plumbing linking REST APIs, Databricks workflows, and Power BI Embedded dashboards",
+      "Systematic DEV-to-QA environment diff checks and repeatable deployment verification",
+      "Governance control & evaluation reviews across Mosaic AI, Aether, and Braintrust"
     ],
-    technologies: ["Python", "SQL", "Tableau", "Power BI", "AWS", "Machine Learning"]
+    technologies: ["AWS Lambda", "TypeScript", "DynamoDB", "Databricks SQL", "Power BI Embedded", "REST APIs", "Mosaic AI", "Braintrust"]
   },
   {
-    position: "Data Analyst",
-    company: "Capgemini",
-    location: "India",
-    duration: "2019 - 2021",
-    type: "Full-time",
-    description: "Transformed business requirements into actionable insights for finance and operations teams.",
-    responsibilities: [
-      "Built automated reporting systems saving 20 hours per week",
-      "Developed SQL pipelines for ETL processes",
-      "Created data visualization dashboards for C-level executives",
-      "Performed statistical analysis to identify business trends",
-      "Collaborated with stakeholders to define KPIs and metrics"
+    id: 2,
+    position: "Software Development & Data Analytics Intern",
+    company: "Vester AI",
+    location: "Remote, USA",
+    duration: "Jul 2025 - Mar 2026",
+    theme: "Cloud ETL & Multi-Agent LLM Systems",
+    focus: "Scaling cloud-native crypto data infrastructure on GCP while building natural-language analytics agents backed by automated evaluation pipelines.",
+    systemsBuilt: [
+      "Automated Python & SQL ingestion pipelines on GCP unifying multi-source market and API feeds",
+      "Scheduled data quality monitoring to catch missing values, format drift, and duplicates across warehouse tables",
+      "Multi-agent LLM coordination translating natural language into validated SQL and interactive charts",
+      "LLM-as-Judge scoring workflows with reference summaries to verify factual grounding"
     ],
-    technologies: ["SQL", "Python", "Tableau", "Excel", "ETL", "Data Warehousing"]
+    technologies: ["Python", "SQL", "GCP", "PostgreSQL", "Multi-Agent LLMs", "LLM-as-Judge", "Streamlit"]
   },
   {
-    position: "Software Engineer",
+    id: 3,
+    position: "Senior Data Analyst & Data Analyst",
     company: "Capgemini",
-    location: "India", 
-    duration: "2018 - 2019",
-    type: "Full-time",
-    description: "Started career focusing on software development and data engineering.",
-    responsibilities: [
-      "Developed data processing applications using Python",
-      "Implemented database solutions for client applications",
-      "Participated in full software development lifecycle",
-      "Wrote technical documentation for data processes"
+    location: "Chennai, India",
+    duration: "Mar 2019 - Oct 2022",
+    theme: "Enterprise Financial Pipelines & Warehouse Tuning",
+    focus: "Engineering high-volume financial risk and operational pipelines on AWS and Snowflake, focused on query performance, data standardization, and repeatable model releases.",
+    systemsBuilt: [
+      "High-volume financial transaction ETL and feature pipelines on AWS Glue, Lambda, Redshift, and Snowflake",
+      "Warehouse performance tuning through query restructuring, early filtering, indexing, and partitioning",
+      "Cross-department service and risk analytics views with automated format validation",
+      "Automated model packaging, publishing, and pre-release deployment checks"
     ],
-    technologies: ["Python", "Java", "SQL", "Git", "Agile"]
+    technologies: ["AWS Glue", "AWS Redshift", "AWS Lambda", "Snowflake", "SQL", "Python", "Tableau", "Power BI"]
   }
 ];
 
-export const skills = {
-  "Programming & Analytics": [
-    { name: "SQL", level: 95, icon: "/images/logos/sql.png" },
-    { name: "Python", level: 90, icon: "/images/logos/python.png" },
-    { name: "R", level: 80, icon: "/images/logos/r.png" }
-  ],
-  "Data Visualization": [
-    { name: "Tableau", level: 90, icon: "/images/logos/tableau.png" },
-    { name: "Power BI", level: 85, icon: "/images/logos/powerbi.png" }
-  ],
-  "Cloud Platforms": [
-    { name: "AWS", level: 80, icon: "/images/logos/aws.jpg" },
-    { name: "Azure", level: 75, icon: "/images/logos/azure.jpg" },
-    { name: "GCP", level: 70, icon: "/images/logos/gcp.png" }
-  ],
-  "Data Engineering": [
-    { name: "Snowflake", level: 85, icon: "/images/logos/snowflake.png" },
-    { name: "Databricks", level: 80, icon: "/images/logos/databricks.png" }
-  ],
-  "Machine Learning": [
-    { name: "Scikit-learn", level: 85, icon: "/images/logos/sklearn.png" },
-    { name: "TensorFlow", level: 75, icon: "/images/logos/tensorflow.png" },
-    { name: "PyTorch", level: 70, icon: "/images/logos/pytorch.png" }
-  ],
-  "Tools & Version Control": [
-    { name: "Git/GitHub", level: 90, icon: "/images/logos/github.png" },
-    { name: "CI/CD", level: 75, icon: "/images/logos/cicd.png" }
-  ]
-};
+export const education = [
+  {
+    id: 1,
+    degree: "Master of Professional Studies: Analytics",
+    school: "Northeastern University",
+    location: "Boston, MA",
+    duration: "Sep 2023 - Mar 2025"
+  },
+  {
+    id: 2,
+    degree: "Post Graduate Diploma in Data Science",
+    school: "IIIT Bangalore & upGrad",
+    location: "Bengaluru, IN",
+    duration: "Sep 2018 - May 2019"
+  },
+  {
+    id: 3,
+    degree: "B.S. in Computer Science",
+    school: "Anna University",
+    location: "Coimbatore, IN",
+    duration: "Aug 2014 - Apr 2018"
+  }
+];
+
+export const certifications = [
+  {
+    id: 1,
+    name: "Tableau Desktop Specialist",
+    issuer: "Tableau Certification"
+  }
+];
 
 export const projects = [
   {
     id: 1,
-    title: "Enhanced Privacy Policy Analyzer",
-    category: "AI/NLP",
-    description: "An intelligent web application that analyzes privacy policies using AI to help users understand what data companies collect, how it's used, and what privacy risks exist.",
-    longDescription: `An intelligent web application that analyzes privacy policies using AI to help users understand what data companies collect, how it's used, and what privacy risks exist.
-    
-    Key Features:
-    • GPT-4 Integration for advanced natural language processing
-    • Platform Detection to automatically identify service types
-    • Interactive Chatbot for follow-up questions
-    • Multi-dimensional privacy assessment across 6 key areas
-    • Regulatory compliance checks for GDPR, CCPA
-    • Readability analysis with complexity metrics`,
-    technologies: ["React", "Python", "Flask", "GPT-4", "SQLite", "Tailwind CSS"],
+    title: "AI SQL Business Intelligence Agent",
+    category: "AI/Automation",
+    description: "A microservice-backed NL-to-SQL assistant that converts plain-English business questions into validated SQL queries and interactive visualizations.",
+    problem: "Non-technical stakeholders often wait on engineering queues for ad-hoc metrics, while naive LLM-to-SQL prototypes fail silently on schema mismatches or malformed queries.",
+    architecture: "Built a containerized Flask/Python service that parses user intent against live schema metadata, generates SQL via LLM prompts, runs a validation and retry layer to catch syntax/execution errors, and returns formatted tables and Chart.js visuals.",
+    technologies: ["Python", "Flask", "Docker", "SQL", "OpenAI GPT", "JavaScript", "Chart.js"],
     images: [
-      "/images/privacy-analyzer-main.jpg",
-      "/images/privacy-analyzer-dashboard.jpg",
-      "/images/privacy-analyzer-enhanced.jpg",
-      "/images/privacy-analyzer-results.jpg"
+      "/images/sql-agent-main.JPG",
+      "/images/sql-agent-explanation.JPG",
+      "/images/sql-agent-generated-query.JPG",
+      "/images/sql-agent-results.JPG",
+      "/images/sql-agent-schema.JPG",
+      "/images/sql-agent-optimization.JPG"
     ],
     features: [
-      "AI-powered analysis with GPT-4",
-      "Comprehensive privacy scoring",
-      "Regulatory compliance checking",
-      "Interactive chatbot interface",
-      "URL scraping and PDF upload support"
+      "Natural-language prompt parsing and schema-aware SQL generation",
+      "Built-in SQL validation and automatic retry loop reducing query failures by 30%",
+      "Dockerized microservice architecture ready for multi-cloud deployment",
+      "Multi-source data support (CSV, Excel, JSON, URLs) with interactive charting",
+      "Query history tracking, dark mode, and keyboard shortcuts"
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/RohithIyer/ai-sql-bi-agent",
+    date: "2024"
+  },
+  {
+    id: 2,
+    title: "Enhanced Privacy Policy Analyzer",
+    category: "AI/NLP",
+    description: "An AI-powered compliance and readability tool that parses dense privacy policies into structured risk scores, regulatory checks, and interactive Q&A.",
+    problem: "Privacy policies are intentionally dense legal documents, making it difficult for users and compliance reviewers to spot data-sharing risks or GDPR/CCPA gaps quickly.",
+    architecture: "Combined URL/PDF ingestion with a Flask backend and React UI that chunks policy text, evaluates six privacy dimensions with GPT-4, computes readability scores, and persists analysis history in SQLite.",
+    technologies: ["React", "Python", "Flask", "GPT-4", "SQLite", "Tailwind CSS"],
+    images: [
+      "/images/privacy-analyzer-main.JPG",
+      "/images/privacy-analyzer-dashboard.JPG",
+      "/images/privacy-analyzer-enhanced.JPG",
+      "/images/privacy-analyzer-results.JPG"
+    ],
+    features: [
+      "Multi-dimensional privacy risk scoring across 6 core areas",
+      "Automated GDPR and CCPA regulatory compliance checks",
+      "Interactive follow-up chatbot grounded in the uploaded policy",
+      "Supports direct URL scraping as well as PDF document uploads",
+      "Readability and legal complexity metrics dashboard"
     ],
     liveUrl: "",
     githubUrl: "https://github.com/RohithIyer/enhanced_privacy_policy_analyzer",
     date: "2024"
   },
   {
-    id: 2,
-    title: "Taxi Service Optimization & Workflow Automation",
-    category: "Machine Learning",
-    description: "A comprehensive system for analyzing taxi service data, predicting demand patterns, and optimizing resource allocation to improve operational efficiency.",
-    longDescription: `This project leverages NYC TLC Trip data to demonstrate data-driven approaches to taxi service optimization through data analysis, predictive modeling, and automated monitoring.
-    
-    Key Accomplishments:
-    • Developed predictive models forecasting trip demand and revenue with 90% accuracy
-    • Created automated systems for monitoring KPIs and alerting stakeholders
-    • Implemented data-driven strategies for resource allocation
-    • Built interactive dashboard for performance visualization`,
-    technologies: ["Python", "Pandas", "Scikit-learn", "Streamlit", "Plotly", "XGBoost"],
+    id: 3,
+    title: "Financial Risk Prediction System",
+    category: "Finance/ML",
+    description: "End-to-end credit default modeling pipeline on 500K+ records featuring automated MLflow retraining and stakeholder risk dashboards.",
+    problem: "Static credit scoring models degrade as borrower behavior shifts, and black-box predictions struggle to earn adoption from risk teams without interpretability.",
+    architecture: "Engineered 50+ financial indicators from 500K+ lending records, trained XGBoost and LSTM ensemble models tracked via MLflow for automated retraining, and paired outputs with SHAP explainability and Tableau risk dashboards.",
+    technologies: ["Python", "XGBoost", "LSTM", "MLflow", "SQL", "Tableau"],
     images: [
-      "/images/demand_forecast.jpg",
-      "/images/demand_trend_chart.jpg",
-      "/images/revenue_forecast.jpg",
-      "/images/revenue_trend_chart.jpg"
+      "/images/financial-risk.jpg",
+      "/images/financial-model-learning-curve1.jpg",
+      "/images/financial-model-learning-curve2.jpg",
+      "/images/financial-default-by-purpose.jpg",
+      "/images/financial-status-by-amount.jpg"
     ],
     features: [
-      "90% accuracy in demand forecasting",
-      "Real-time KPI monitoring",
-      "Interactive Streamlit dashboard",
-      "Automated alert system",
-      "Resource optimization recommendations"
+      "Trained on 500K+ records, improving loan approval predictions by 15%",
+      "Maintained 92% prediction accuracy via automated MLflow retraining",
+      "Feature importance and SHAP interpretability for transparent risk scoring",
+      "Executive risk dashboards that drove a 65% lift in stakeholder adoption"
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/RohithIyer/ProjectRepository",
+    date: "2024"
+  },
+  {
+    id: 4,
+    title: "Taxi Service Optimization & Workflow Automation",
+    category: "Machine Learning",
+    description: "Demand and revenue forecasting system on NYC TLC trip data with automated KPI alerting and fleet allocation insights.",
+    problem: "Urban mobility operators lose revenue when fleet supply lags peak demand zones, yet manual reporting reacts too late to shifting hourly patterns.",
+    architecture: "Built a time-series and gradient-boosted forecasting pipeline in Python (XGBoost & Scikit-learn) feeding a Streamlit + Plotly operational console with threshold-based KPI alerts.",
+    technologies: ["Python", "Pandas", "Scikit-learn", "XGBoost", "Streamlit", "Plotly"],
+    images: [
+      "/images/demand_forecast.JPG",
+      "/images/demand_trend_chart.JPG",
+      "/images/revenue_forecast.JPG",
+      "/images/revenue_trend_chart.JPG",
+      "/images/efficiency_metrics.JPG"
+    ],
+    features: [
+      "Trip demand and revenue forecasting with 90% accuracy on NYC TLC data",
+      "Automated KPI monitoring and anomaly alerting for operations teams",
+      "Interactive Streamlit dashboard for zone-level fleet allocation",
+      "Model accuracy tracking across demand and revenue horizons"
     ],
     liveUrl: "",
     githubUrl: "https://github.com/RohithIyer/taxi-service-optimization",
     date: "2024"
   },
   {
-    id: 3,
-    title: "AI SQL Business Intelligence Agent",
-    category: "AI/Automation",
-    description: "An intelligent SQL query generator that uses AI to transform natural language questions into SQL queries.",
-    longDescription: `An intelligent SQL query generator that transforms natural language questions into optimized SQL queries using OpenAI GPT models.
-    
-    Features:
-    • Natural language to SQL conversion
-    • Support for multiple data sources (CSV, Excel, JSON, URLs)
-    • Interactive data visualization with Chart.js
-    • Query history and templates for efficiency
-    • Dark mode and multiple themes
-    • Keyboard shortcuts for power users`,
-    technologies: ["Python", "OpenAI GPT", "FastAPI", "JavaScript", "Chart.js", "SQL"],
-    images: [
-      "/images/sql-agent-main.jpg",
-      "/images/sql-agent-exploration.jpg",
-      "/images/sql-agent-generated-query.jpg",
-      "/images/sql-agent-results.jpg"
-    ],
-    features: [
-      "Natural language to SQL conversion",
-      "Multiple data source support",
-      "Interactive visualizations",
-      "Query history tracking",
-      "Keyboard shortcuts"
-    ],
-    liveUrl: "",
-    githubUrl: "https://github.com/RohithIyer/AI-SQL-BI-Agent",
-    date: "2024"
-  },
-  {
-    id: 4,
+    id: 5,
     title: "Call of Duty Analytics Platform",
     category: "Gaming Analytics",
-    description: "A comprehensive analytics platform for Call of Duty game data, featuring player analytics, revenue optimization, fraud detection, and real-time monitoring.",
-    longDescription: `A comprehensive analytics platform analyzing Call of Duty game data to provide insights on player behavior, revenue optimization, and fraud detection.
-    
-    Features:
-    • Comprehensive player behavior analysis and segmentation
-    • Transaction analysis and monetization insights
-    • Automated fraud detection for transactions
-    • Live dashboards and monitoring capabilities
-    • Interactive charts using Plotly and Streamlit
-    • FastAPI backend for data access`,
+    description: "Player behavior, monetization, and transaction fraud analytics platform built with a FastAPI backend and live Streamlit dashboards.",
+    problem: "Live-service games generate high-velocity telemetry and in-game transactions where churn signals and fraudulent purchases must be surfaced quickly.",
+    architecture: "Designed a decoupled FastAPI data service backed by Pandas/ML anomaly routines, serving segmented player cohorts, revenue funnels, and fraud alerts to an interactive Plotly/Streamlit UI.",
     technologies: ["Python", "FastAPI", "Streamlit", "Plotly", "Pandas", "Machine Learning"],
     images: [
-      "/images/dashboard_header.jpg",
-      "/images/financial-status-by-amount.jpg",
-      "/images/financial-default-by-purpose.jpg"
+      "/images/dashboard_header.JPG",
+      "/images/forecast_insights.JPG",
+      "/images/model_revenue_accuracy.JPG"
     ],
     features: [
-      "Player behavior analytics",
-      "Revenue optimization insights",
-      "Fraud detection system",
-      "Real-time monitoring",
-      "REST API backend"
+      "Player cohort segmentation and retention behavior analysis",
+      "In-game transaction and monetization funnel tracking",
+      "Automated anomaly and fraud detection on transaction streams",
+      "REST API backend decoupled from the interactive analytics frontend"
     ],
     liveUrl: "",
-    githubUrl: "https://github.com/RohithIyer/call-of-duty-analytics",
+    githubUrl: "https://github.com/RohithIyer/cod-analytics-platform",
     date: "2023"
-  },
-  {
-    id: 5,
-    title: "Financial Risk Prediction Model",
-    category: "Finance/ML",
-    description: "Machine learning model to predict loan default risk with 92% accuracy using XGBoost and LSTM.",
-    longDescription: `Developed a sophisticated financial risk model that predicts loan default probability using advanced machine learning techniques.
-    
-    Achievements:
-    • 92% prediction accuracy using ensemble methods
-    • Feature engineering from 50+ financial indicators
-    • Real-time risk scoring API
-    • Model interpretability with SHAP values
-    • Automated model retraining pipeline`,
-    technologies: ["Python", "XGBoost", "LSTM", "MLflow", "SQL", "Tableau"],
-    images: [
-      "/images/financial-risk.jpg",
-      "/images/financial-model-learning-curve1.jpg",
-      "/images/financial-model-learning-curve2.jpg",
-      "/images/model_demand_accuracy.jpg"
-    ],
-    features: [
-      "92% prediction accuracy",
-      "Credit risk scoring",
-      "Feature importance analysis",
-      "Risk visualization dashboard",
-      "Model performance monitoring"
-    ],
-    liveUrl: "",
-    githubUrl: "https://github.com/RohithIyer/financial-risk-model",
-    date: "2024"
   },
   {
     id: 6,
     title: "Airbnb Market Analysis Dashboard",
     category: "Data Visualization",
-    description: "Comprehensive analysis of Airbnb pricing and availability trends in Austin using SQL and Tableau.",
-    longDescription: `Analyzed Airbnb market data for Austin to identify pricing patterns, seasonal trends, and investment opportunities.
-    
-    Key Insights:
-    • Identified optimal pricing strategies by neighborhood
-    • Seasonal demand patterns and price fluctuations
-    • Host performance metrics and success factors
-    • Property type analysis and ROI calculations
-    • Interactive Tableau dashboard for stakeholders`,
+    description: "Geospatial and seasonal pricing intelligence for the Austin short-term rental market using SQL and Tableau.",
+    problem: "Property hosts and investors lack clear visibility into how neighborhood, seasonality, and room type jointly affect nightly rates and occupancy ROI.",
+    architecture: "Cleaned and aggregated Austin listing datasets in SQL and Python, then authored an interactive Tableau workbook linking neighborhood hotspots, pricing boxplots, and seasonal trends.",
     technologies: ["SQL", "Tableau", "Python", "Pandas", "Statistical Analysis"],
     images: [
       "/images/airbnb-dashboard.jpg",
+      "/images/airbnb-hotspot-map.jpg",
       "/images/airbnb-pricing-boxplot.jpg",
       "/images/airbnb-seasonal-trends.jpg",
       "/images/airbnb-hosts-chart.jpg"
     ],
     features: [
-      "Market trend analysis",
-      "Pricing optimization insights",
-      "Seasonal pattern detection",
-      "Interactive Tableau dashboards",
-      "Investment recommendations"
+      "Neighborhood-level pricing benchmarks and hotspot mapping",
+      "Seasonal demand curves and peak pricing window analysis",
+      "Host performance and superhost conversion metrics",
+      "Property-type ROI comparison for investment decision-making"
     ],
     liveUrl: "",
     githubUrl: "https://github.com/RohithIyer/ProjectRepository/tree/main/Airbnb%20Dashboard",
@@ -347,15 +267,10 @@ export const projects = [
   }
 ];
 
-// Re-export projectsData for compatibility
 export const projectsData = projects;
 
-// Skills data for compatibility
-export const skillsData = skills;
-
-// Helper functions
 export const getProjectById = (id) => {
-  return projects.find(project => project.id === parseInt(id));
+  return projects.find(project => project.id === parseInt(id, 10));
 };
 
 export const getProjectsByCategory = (category) => {
@@ -364,18 +279,5 @@ export const getProjectsByCategory = (category) => {
 };
 
 export const getCategories = () => {
-  const categories = ['All', ...new Set(projects.map(project => project.category))];
-  return categories;
-};
-
-export const getSkillCategories = () => {
-  return Object.keys(skills);
-};
-
-export const getSkillsByCategory = (category) => {
-  return skills[category] || [];
-};
-
-export const getAllSkills = () => {
-  return Object.values(skills).flat();
+  return ['All', ...new Set(projects.map(project => project.category))];
 };

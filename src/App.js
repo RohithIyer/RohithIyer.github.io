@@ -7,9 +7,9 @@ import Navigation from './components/Navigation/Navigation';
 import ImageCarousel from './components/ImageCarousel/ImageCarousel';
 import About from './components/About/About';
 import Skills from './components/Skills/Skills';
-import Education from './components/Education/Education';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
+import Education from './components/Education/Education';
 import ProjectDetails from './components/ProjectDetails/ProjectDetails';
 import Footer from './components/Footer/Footer';
 
@@ -27,9 +27,9 @@ function App() {
                 <ImageCarousel />
                 <About />
                 <Skills />
-                <Education />
                 <Experience />
                 <Projects />
+                <Education />
               </main>
               <Footer />
             </>

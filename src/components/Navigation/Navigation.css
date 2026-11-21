@@ -1,112 +1,84 @@
 /* Navigation.css */
 
 .navigation-section {
+  background-color: white;
+  padding: 20px 0;
   position: sticky;
-  top: calc(var(--header-height) + 16px);
-  z-index: 45;
-  padding: 12px 0 36px;
-  margin-top: -48px;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
 }
 
 .nav-container {
-  width: min(100% - 40px, var(--max-width));
+  max-width: var(--max-width);
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .nav-buttons {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  box-shadow: var(--shadow-sm);
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .nav-button {
+  padding: 10px 20px;
+  background-color: var(--section-bg);
+  color: var(--text-color);
+  border: 2px solid transparent;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  padding: 0.65rem 1.5rem;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-color);
-  border: 1px solid transparent;
-  background: rgba(241, 245, 249, 0.6);
-  transition: var(--transition);
+  gap: 8px;
 }
 
-.nav-button:hover,
-.nav-button:focus-visible {
-  background: rgba(37, 99, 235, 0.1);
-  color: var(--primary-color);
-  border-color: rgba(37, 99, 235, 0.15);
+.nav-button:hover {
+  background-color: var(--primary-color);
+  color: white;
   transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .resume-button {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: #ffffff;
-  border-color: transparent;
-  box-shadow: var(--shadow-xs);
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
 }
 
-.resume-button:hover,
-.resume-button:focus-visible {
-  box-shadow: var(--shadow-sm);
-  transform: translateY(-2px) scale(1.01);
+.resume-button:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .resume-icon {
   font-size: 1rem;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-  .navigation-section {
-    top: calc(var(--header-height) + 8px);
-    margin-top: -32px;
-  }
-
   .nav-buttons {
-    border-radius: 24px;
-    padding: 12px 12px;
-    justify-content: flex-start;
-    overflow-x: auto;
-    scrollbar-width: none;
+    gap: 10px;
   }
-
-  .nav-buttons::-webkit-scrollbar {
-    display: none;
-  }
-
+  
   .nav-button {
-    flex-shrink: 0;
-    padding: 0.6rem 1.25rem;
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
   .navigation-section {
-    padding: 8px 0 28px;
+    padding: 15px 0;
   }
-
-  .nav-container {
-    width: min(100% - 24px, var(--max-width));
-  }
-
-  .nav-buttons {
-    padding: 10px;
-    gap: 10px;
-  }
-
+  
   .nav-button {
-    padding: 0.55rem 1.1rem;
-    font-size: 0.9rem;
+    padding: 6px 12px;
+    font-size: 0.85rem;
   }
 }

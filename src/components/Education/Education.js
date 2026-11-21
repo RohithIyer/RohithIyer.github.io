@@ -1,8 +1,8 @@
 // Education.js
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaTrophy } from 'react-icons/fa';
-import { education } from '../../data/portfolioData';
+import { FaGraduationCap, FaCertificate } from 'react-icons/fa';
+import { education, certifications } from '../../data/portfolioData';
 import './Education.css';
 
 const Education = () => {
@@ -16,45 +16,51 @@ const Education = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-title">Education</h2>
+          <h2 className="section-title">Education & Certifications</h2>
+          <p className="section-subtitle">Academic foundation and industry credentials</p>
         </motion.div>
 
-        <div className="education-timeline">
+        <div className="credentials-grid">
           {education.map((edu, index) => (
             <motion.div
               key={edu.id}
-              className="education-item"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="credential-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="education-icon">
+              <div className="credential-icon">
                 <FaGraduationCap />
               </div>
-              
-              <div className="education-content">
+              <div className="credential-body">
                 <h3 className="degree">{edu.degree}</h3>
-                <h4 className="institution">{edu.institution}</h4>
+                <p className="institution">{edu.school}</p>
                 <div className="education-meta">
-                  <span className="location">{edu.location}</span>
-                  <span className="duration">{edu.duration}</span>
+                  <span>{edu.location}</span>
+                  <span>•</span>
+                  <span>{edu.duration}</span>
                 </div>
-                
-                {edu.gpa && (
-                  <div className="gpa-badge">
-                    <FaTrophy className="trophy-icon" />
-                    <span>GPA: {edu.gpa}</span>
-                  </div>
-                )}
-                
-                {edu.achievements && (
-                  <ul className="achievements">
-                    {edu.achievements.map((achievement, idx) => (
-                      <li key={idx}>{achievement}</li>
-                    ))}
-                  </ul>
-                )}
+              </div>
+            </motion.div>
+          ))}
+
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={`cert-${cert.id}`}
+              className="credential-card certification-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: (education.length + index) * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="credential-icon cert-icon">
+                <FaCertificate />
+              </div>
+              <div className="credential-body">
+                <span className="credential-tag">Certification</span>
+                <h3 className="degree">{cert.name}</h3>
+                <p className="institution">{cert.issuer}</p>
               </div>
             </motion.div>
           ))}
